@@ -1,0 +1,14 @@
+base de classe em java 
+
+public class NomedaClasse{
+    public static void main(String[] args) {
+    }
+}
+
+no nome da classe e usado o casecamel
+
+==//===//==
+
+para compilar o program e usado o javac
+para execultar o java e usado java
+

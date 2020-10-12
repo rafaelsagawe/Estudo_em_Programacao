@@ -1,0 +1,20 @@
+// Bloco de ajustes do paragrafo
+p {
+  color: blue;
+}
+
+// Fim do bloco de ajustes do paragrafo
+//Inicio dos ajustes de estilos nos cabeçalhos
+h1 {
+  font-family: serif;
+  background-image: url(sobre-background.jpg);
+}
+
+h2 {
+  font-family: sans-serif;
+}
+
+//Fim dos ajustes de estilos nos cabeçalhos
+h2~p {
+  font-style: italic;
+}

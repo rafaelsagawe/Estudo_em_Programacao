@@ -1,0 +1,14 @@
+.menu-opcoes {
+  // código de um menu de opcoes
+  // essas regras serão aplicadas ao nav
+}
+
+.menu-cabecalho {
+  // código de um menu no cabeçalho
+  // essas regras TAMBÉM serão aplicadas ao nav
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}

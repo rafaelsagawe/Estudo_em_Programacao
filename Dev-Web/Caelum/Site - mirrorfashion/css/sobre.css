@@ -1,0 +1,82 @@
+/* CSS do corpo da pagina*/
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 940px;
+  color: #333333;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/*CSS dos cabeçalhos*/
+
+h1 {
+  background-image: url(../img/sobre-background.jpg);
+  padding: 10px;
+}
+
+h2 {
+  border-bottom: 2px solid #333333;
+  margin-top: 30px;
+}
+
+/*CSS do paragrafo*/
+
+p {
+  padding: 0 45px;
+  text-indent: 15px;
+  /*padding: 10px 20px 15px 5px;
+  margin: 0 auto;
+  background-color: green;
+  height: 300px;
+  width: 300px;*/
+}
+
+p:first-letter {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+h1+p {
+  text-indent: 0;
+}
+
+p::first-line {
+  font-variant: small-caps;
+}
+
+/*CSS das figuras*/
+
+figure {
+  padding: 15px;
+  margin: 30px;
+  background-color: #f2eded;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/*Estilos dos seletores*/
+
+#centro-distribuicao {
+  /*  float: left;
+  margin: 0 0 10px 10px;*/
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+}
+
+#rodape img {
+  margin-right: 30px;
+  vertical-align: middle;
+  width: 94px;
+}
+
+#familia-pelho {
+  float: right;
+  margin: 0 0 10px 10px;
+}

@@ -1,0 +1,50 @@
+h1{
+  color: rgb(153, 55, 191);
+}
+﻿h2 ~ p {
+font-style: italic;
+}
+h2 + p {
+  font-variant: small-caps;
+}
+.gradiente {
+background: #cbebff;
+background: linear-gradient(45deg, #f0f9ff 0%, #cbebff 47%, #a1dbff 100%);
+}
+
+/*p {
+color: gray;
+}
+p.especial {
+color: black; /* restaura cor do especial */
+
+p:not(.especial) {
+color: gray;
+}
+li:first-child {
+color: red;
+}
+li:last-child {
+color: blue;
+}
+li:nth-child(2n) { color: green; } /* elementos pares */
+li:nth-child(2n+1) { color: blue; } /* elementos impares */
+a:hover{
+  background-color: #5f27b0;
+}
+p::first-letter{
+  font-size: 200%;
+  font-style: italic;
+  }
+
+
+  a:before {
+  content: '[ ';
+  }
+  a:after {
+  content: ' ]';
+  }
+
+  a[href^=http://]:after {
+content: ' (externo)';
+}

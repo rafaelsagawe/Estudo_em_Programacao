@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PG Preloader</title>
+</head>
+
+<body>
+		<!-- inicio do preload -->
+		<div id="preloader">
+		<div class="inner">
+			<div class="bolas">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		</div>
+	<!-- fim do preloader -->
+</body>
+</html>
+
+<link rel="stylesheet" href="preloader.css">
+
+<script type="text/javascript"> == 50
+//<![CDATA[
+$(window).on('load', function () {
+    $('#preloader .inner').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow'); 
+    $('body').delay(350).css({'overflow': 'visible'});
+})
+//]]>
+
+</script>
