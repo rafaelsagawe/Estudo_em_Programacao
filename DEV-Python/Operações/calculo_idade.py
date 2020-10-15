@@ -19,3 +19,7 @@ data_atual = date.today()
 data_convertida = data_atual.strftime('%Y')
 idade = int(data_convertida) - int(nasc_ano)
 print(idade)
+if int(idade < 18):
+    print(str(idade) + " então menor de idade")
+else:
+    print(str(idade) + " então maior de idade")
