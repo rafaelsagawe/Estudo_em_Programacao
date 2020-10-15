@@ -18,3 +18,5 @@ L26 = input("ultima: ")
 print (L1+ " " + L26)
 
 
+import django
+print(django.get_version())

@@ -1,2 +1,2 @@
-import django
-print(django.get_version())
+msg = "Olá mundo! Python"
+print(msg)
