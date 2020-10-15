@@ -5,7 +5,7 @@ data_atual = input("Data atual: ")
 idade = int(data_atual) - int(nasc_data) 
 print(idade)
 
-# 02 - Pegando a data atual e convertendo no formato protugues
+# 02 - Pegando a data atual e convertendo no formato português
 from datetime import date
 data_atual = date.today()
 data_texto = data_atual.strftime('%d/%m/%Y')
