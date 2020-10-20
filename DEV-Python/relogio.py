@@ -17,4 +17,5 @@ def get_current_time():
 get_current_time()
 relogio.mainloop()
 
+
 #https://erlonbcc.wordpress.com/2020/03/29/python-tkinter-criando-relogio/
