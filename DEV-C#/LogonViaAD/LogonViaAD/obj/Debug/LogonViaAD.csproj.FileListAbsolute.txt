@@ -1,0 +1,10 @@
+C:\Users\rafael.sagawe\source\repos\LogonViaAD\LogonViaAD\bin\Debug\LogonViaAD.exe.config
+C:\Users\rafael.sagawe\source\repos\LogonViaAD\LogonViaAD\bin\Debug\LogonViaAD.exe
+C:\Users\rafael.sagawe\source\repos\LogonViaAD\LogonViaAD\bin\Debug\LogonViaAD.pdb
+C:\Users\rafael.sagawe\source\repos\LogonViaAD\LogonViaAD\obj\Debug\LogonViaAD.csprojAssemblyReference.cache
+C:\Users\rafael.sagawe\source\repos\LogonViaAD\LogonViaAD\obj\Debug\LogonViaAD.Form1.resources
+C:\Users\rafael.sagawe\source\repos\LogonViaAD\LogonViaAD\obj\Debug\LogonViaAD.Properties.Resources.resources
+C:\Users\rafael.sagawe\source\repos\LogonViaAD\LogonViaAD\obj\Debug\LogonViaAD.csproj.GenerateResource.cache
+C:\Users\rafael.sagawe\source\repos\LogonViaAD\LogonViaAD\obj\Debug\LogonViaAD.csproj.CoreCompileInputs.cache
+C:\Users\rafael.sagawe\source\repos\LogonViaAD\LogonViaAD\obj\Debug\LogonViaAD.exe
+C:\Users\rafael.sagawe\source\repos\LogonViaAD\LogonViaAD\obj\Debug\LogonViaAD.pdb
