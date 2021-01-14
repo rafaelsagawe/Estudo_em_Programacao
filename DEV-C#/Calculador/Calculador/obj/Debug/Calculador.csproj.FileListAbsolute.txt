@@ -1,0 +1,10 @@
+C:\Users\rafael.sagawe\source\repos\Calculador\Calculador\bin\Debug\Calculador.exe.config
+C:\Users\rafael.sagawe\source\repos\Calculador\Calculador\bin\Debug\Calculador.exe
+C:\Users\rafael.sagawe\source\repos\Calculador\Calculador\bin\Debug\Calculador.pdb
+C:\Users\rafael.sagawe\source\repos\Calculador\Calculador\obj\Debug\Calculador.csprojAssemblyReference.cache
+C:\Users\rafael.sagawe\source\repos\Calculador\Calculador\obj\Debug\Calculador.Form1.resources
+C:\Users\rafael.sagawe\source\repos\Calculador\Calculador\obj\Debug\Calculador.Properties.Resources.resources
+C:\Users\rafael.sagawe\source\repos\Calculador\Calculador\obj\Debug\Calculador.csproj.GenerateResource.cache
+C:\Users\rafael.sagawe\source\repos\Calculador\Calculador\obj\Debug\Calculador.csproj.CoreCompileInputs.cache
+C:\Users\rafael.sagawe\source\repos\Calculador\Calculador\obj\Debug\Calculador.exe
+C:\Users\rafael.sagawe\source\repos\Calculador\Calculador\obj\Debug\Calculador.pdb
