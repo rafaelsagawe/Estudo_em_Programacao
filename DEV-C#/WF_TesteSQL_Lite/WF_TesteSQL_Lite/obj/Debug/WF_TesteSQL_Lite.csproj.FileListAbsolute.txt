@@ -1,0 +1,10 @@
+C:\git\Estudo_em_Programacao\DEV-C#\WF_TesteSQL_Lite\WF_TesteSQL_Lite\obj\Debug\WF_TesteSQL_Lite.csprojAssemblyReference.cache
+C:\git\Estudo_em_Programacao\DEV-C#\WF_TesteSQL_Lite\WF_TesteSQL_Lite\obj\Debug\WF_TesteSQL_Lite.Form1.resources
+C:\git\Estudo_em_Programacao\DEV-C#\WF_TesteSQL_Lite\WF_TesteSQL_Lite\obj\Debug\WF_TesteSQL_Lite.Properties.Resources.resources
+C:\git\Estudo_em_Programacao\DEV-C#\WF_TesteSQL_Lite\WF_TesteSQL_Lite\obj\Debug\WF_TesteSQL_Lite.csproj.GenerateResource.cache
+C:\git\Estudo_em_Programacao\DEV-C#\WF_TesteSQL_Lite\WF_TesteSQL_Lite\obj\Debug\WF_TesteSQL_Lite.csproj.CoreCompileInputs.cache
+C:\git\Estudo_em_Programacao\DEV-C#\WF_TesteSQL_Lite\WF_TesteSQL_Lite\bin\Debug\WF_TesteSQL_Lite.exe.config
+C:\git\Estudo_em_Programacao\DEV-C#\WF_TesteSQL_Lite\WF_TesteSQL_Lite\bin\Debug\WF_TesteSQL_Lite.exe
+C:\git\Estudo_em_Programacao\DEV-C#\WF_TesteSQL_Lite\WF_TesteSQL_Lite\bin\Debug\WF_TesteSQL_Lite.pdb
+C:\git\Estudo_em_Programacao\DEV-C#\WF_TesteSQL_Lite\WF_TesteSQL_Lite\obj\Debug\WF_TesteSQL_Lite.exe
+C:\git\Estudo_em_Programacao\DEV-C#\WF_TesteSQL_Lite\WF_TesteSQL_Lite\obj\Debug\WF_TesteSQL_Lite.pdb

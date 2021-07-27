@@ -11,4 +11,3 @@ values
 ('Betha', '456', 'betha@sa.com'),
 ('Sigma', '789', 'sigma@sa.com');
 
-DROP table contatos2;

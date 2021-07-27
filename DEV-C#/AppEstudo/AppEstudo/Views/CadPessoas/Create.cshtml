@@ -1,0 +1,43 @@
+﻿@model AppEstudo.Models.CadPessoa
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>CadPessoa</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NomePrimeiro" class="control-label"></label>
+                <input asp-for="NomePrimeiro" class="form-control" />
+                <span asp-validation-for="NomePrimeiro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubreNome" class="control-label"></label>
+                <input asp-for="SubreNome" class="form-control" />
+                <span asp-validation-for="SubreNome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataNascimento" class="control-label"></label>
+                <input asp-for="DataNascimento" class="form-control" />
+                <span asp-validation-for="DataNascimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
