@@ -15,5 +15,9 @@ namespace AppEstudo.Data
         }
 
         public DbSet<AppEstudo.Models.CadPessoa> CadPessoa { get; set; }
+
+        public DbSet<AppEstudo.Models.Conserto> Conserto { get; set; }
+
+        public DbSet<AppEstudo.Models.ConsertoDetalhes> ConsertoDetalhes { get; set; }
     }
 }

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<EscolaSagawe.Models.EscolaViewModels.Estatistica>
+
+@{
+    ViewData["Title"] = "Sobre";
+}
+<h1>@ViewData["Title"]</h1>
+
+<h2> Estatisticas de alunos</h2>
+
+<table>
+    <tr>
+        <th> Data de Matricula </th>
+        <th> Estudante </th>
+    </tr>
+    @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.DataMatricula) </td>
+                    <td>@item.ContagemEstudante</td>
+                </tr>
+            }
+</table>

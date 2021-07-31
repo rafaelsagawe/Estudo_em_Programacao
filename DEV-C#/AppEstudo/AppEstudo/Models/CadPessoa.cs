@@ -39,23 +39,16 @@ namespace AppEstudo.Models
         {
             get
             {
-                return Convert.ToInt32(IdadeCalculada.ToString().Substring(0, 2));
+                return DateTime.Now.Year - AnoNascimento;
             }
         }
         
-        public TimeSpan IdadeCalculada
+        public int AnoNascimento
         {
             get
             {
-                return IdadeCalculadaBruta /12 /30;
-            }
-        }
+                return Convert.ToInt32(DataNascimento.Year.ToString());
 
-        public TimeSpan IdadeCalculadaBruta
-        {
-            get
-            {
-                return (DateTime.Now.Date - DataNascimento) ;
             }
         }
     }

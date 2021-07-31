@@ -39,6 +39,77 @@ namespace AppEstudo.Migrations
 
                     b.ToTable("CadPessoa");
                 });
+
+            modelBuilder.Entity("AppEstudo.Models.Conserto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DataEntrada")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DescricaoDefeito")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DescricaoSolucao")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NomeCliente")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NomeFuncionario")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NomePeca")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("ValorMaoObra")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("ValorTotalConserto")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Conserto");
+                });
+
+            modelBuilder.Entity("AppEstudo.Models.ConsertoDetalhes", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("ConsertoId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeCliente")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PecasId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Total")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ConsertoId");
+
+                    b.ToTable("ConsertoDetalhes");
+                });
+
+            modelBuilder.Entity("AppEstudo.Models.ConsertoDetalhes", b =>
+                {
+                    b.HasOne("AppEstudo.Models.Conserto", "Conserto")
+                        .WithMany()
+                        .HasForeignKey("ConsertoId");
+
+                    b.Navigation("Conserto");
+                });
 #pragma warning restore 612, 618
         }
     }

@@ -9,7 +9,6 @@ C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\bin\Debug\net5.0\ref\App
 C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\bin\Debug\net5.0\AppEstudo.pdb
 C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\bin\Debug\net5.0\AppEstudo.Views.dll
 C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\bin\Debug\net5.0\AppEstudo.Views.pdb
-C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\AppEstudo.csprojAssemblyReference.cache
 C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\AppEstudo.GeneratedMSBuildEditorConfig.editorconfig
 C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\AppEstudo.AssemblyInfoInputs.cache
 C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\AppEstudo.AssemblyInfo.cs
@@ -149,3 +148,14 @@ C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\Razor\V
 C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\Razor\Views\CadPessoas\Details.cshtml.g.cs
 C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\Razor\Views\CadPessoas\Edit.cshtml.g.cs
 C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\Razor\Views\CadPessoas\Index.cshtml.g.cs
+C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\Razor\Views\Consertoes\Create.cshtml.g.cs
+C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\Razor\Views\Consertoes\Delete.cshtml.g.cs
+C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\Razor\Views\Consertoes\Details.cshtml.g.cs
+C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\Razor\Views\Consertoes\Edit.cshtml.g.cs
+C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\Razor\Views\Consertoes\Index.cshtml.g.cs
+C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\AppEstudo.csproj.AssemblyReference.cache
+C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\Razor\Views\ConsertoDetalhes\Create.cshtml.g.cs
+C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\Razor\Views\ConsertoDetalhes\Delete.cshtml.g.cs
+C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\Razor\Views\ConsertoDetalhes\Details.cshtml.g.cs
+C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\Razor\Views\ConsertoDetalhes\Edit.cshtml.g.cs
+C:\git\Estudo_em_Programacao\DEV-C#\AppEstudo\AppEstudo\obj\Debug\net5.0\Razor\Views\ConsertoDetalhes\Index.cshtml.g.cs
