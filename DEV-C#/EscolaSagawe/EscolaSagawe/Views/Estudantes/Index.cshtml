@@ -9,7 +9,7 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table id="Estudantes" class="table">
     <thead>
         <tr>
             <th>
@@ -45,3 +45,17 @@
 }
     </tbody>
 </table>
+
+
+@section Scripts{ 
+    <!-- Scripts em JavaScript-->
+<script>
+    $(document).ready(function () {
+        $('#Estudantes').DataTable({
+            "language": {
+                "url": "http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json"
+            }
+        });
+    });
+</script>
+}

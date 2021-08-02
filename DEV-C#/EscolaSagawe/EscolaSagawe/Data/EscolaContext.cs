@@ -15,7 +15,16 @@ namespace EscolaSagawe.Data
 
         public DbSet<Curso> Cursos { get; set; }
         public DbSet<Matricula> Matriculas { get; set; }
-
         public DbSet<Estudante> Estudantes { get; set; }
+        public DbSet<Departamento> Departamentos { get; set; }
+        public DbSet<Instrutor> Instrutors { get; set; }
+        public DbSet<Sala> Salas { get; set; }
+        public DbSet<CursoAdministrado> CursosAdministrados { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<CursoAdministrado>().HasKey(c => new { c.CursoID, c.InstrutorID });
+        }
+
+
     }
 }
