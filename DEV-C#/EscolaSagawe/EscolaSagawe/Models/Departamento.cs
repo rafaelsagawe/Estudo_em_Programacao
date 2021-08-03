@@ -11,7 +11,7 @@ namespace EscolaSagawe.Models
     {
         public int DepartamentoID { get; set; }
 
-        [StringLength(50), MinLength(3)]
+        [StringLength(50, MinimumLength = 3)]
         public string Nome { get; set; }
 
         [DataType(DataType.Currency)]
@@ -26,7 +26,6 @@ namespace EscolaSagawe.Models
         public int? InstrutorID { get; set; }
 
         public Instrutor Administrador { get; set; }
-        
         public ICollection<Curso> Cursos { get; set; }
     }
 }

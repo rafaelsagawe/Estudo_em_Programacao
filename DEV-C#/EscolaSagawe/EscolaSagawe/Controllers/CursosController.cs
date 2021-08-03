@@ -27,6 +27,7 @@ namespace EscolaSagawe.Controllers
             return View(await escolaContext.ToListAsync());
         }
         */
+        
         // Index tutorial
         public async Task<IActionResult> Index()
         {
@@ -36,7 +37,7 @@ namespace EscolaSagawe.Controllers
             return View(await cursos.ToArrayAsync());
         }
 
-
+        
 
         // GET: Cursos/Details/5
         public async Task<IActionResult> Details(int? id)

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -14,7 +13,7 @@ namespace EscolaSagawe.Models
         [Display(Name = "Codigo")]
         public int CursoID { get; set; }
 
-        [StringLength(50), MinLength(3)]
+        [StringLength(50, MinimumLength = 3, ErrorMessage ="No minimo 3 e no maximo 50 caracteres")]
         public string Titulo { get; set; }
 
         [Range(0, 10)]
@@ -26,6 +25,7 @@ namespace EscolaSagawe.Models
 
         public ICollection<Matricula> Matriculas { get; set; }
 
-        public ICollection<CursoAdministrado> cursoAdministrados { get; set; }
+        public ICollection<Instrutor> Instrutors { get; set; }
+
     }
 }

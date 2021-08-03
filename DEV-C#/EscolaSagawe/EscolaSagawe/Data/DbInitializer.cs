@@ -136,47 +136,6 @@ namespace EscolaSagawe.Data
             }
             context.SaveChanges();
 
-            var courseInstructors = new CursoAdministrado[]
-            {
-                new CursoAdministrado {
-                    CursoID = courses.Single(c => c.Titulo == "Chemistry" ).CursoID,
-                    InstrutorID = Instrutores.Single(i => i.SobreNome == "Kapoor").ID
-                    },
-                new CursoAdministrado {
-                    CursoID = courses.Single(c => c.Titulo == "Chemistry" ).CursoID,
-                    InstrutorID = Instrutores.Single(i => i.SobreNome == "Harui").ID
-                    },
-                new CursoAdministrado {
-                    CursoID = courses.Single(c => c.Titulo == "Microeconomics" ).CursoID,
-                    InstrutorID = Instrutores.Single(i => i.SobreNome == "Zheng").ID
-                    },
-                new CursoAdministrado {
-                    CursoID = courses.Single(c => c.Titulo == "Macroeconomics" ).CursoID,
-                    InstrutorID = Instrutores.Single(i => i.SobreNome == "Zheng").ID
-                    },
-                new CursoAdministrado {
-                    CursoID = courses.Single(c => c.Titulo == "Calculus" ).CursoID,
-                    InstrutorID = Instrutores.Single(i => i.SobreNome == "Fakhouri").ID
-                    },
-                new CursoAdministrado {
-                    CursoID = courses.Single(c => c.Titulo == "Trigonometry" ).CursoID,
-                    InstrutorID = Instrutores.Single(i => i.SobreNome == "Harui").ID
-                    },
-                new CursoAdministrado {
-                    CursoID = courses.Single(c => c.Titulo == "Composition" ).CursoID,
-                    InstrutorID = Instrutores.Single(i => i.SobreNome == "Abercrombie").ID
-                    },
-                new CursoAdministrado {
-                    CursoID = courses.Single(c => c.Titulo == "Literature" ).CursoID,
-                    InstrutorID = Instrutores.Single(i => i.SobreNome == "Abercrombie").ID
-                    },
-            };
-
-            foreach (CursoAdministrado ci in courseInstructors)
-            {
-                context.CursosAdministrados.Add(ci);
-            }
-            context.SaveChanges();
 
             var enrollments = new Matricula[]
             {

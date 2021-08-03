@@ -13,12 +13,12 @@ namespace EscolaSagawe.Models
 
         [Required]
         [Display(Name ="Nome")]
-        [StringLength(250)]
+        [StringLength(50, ErrorMessage ="O nome pode ter apenas 50 caracteres")]
         public string Nome { get; set; }
 
         [Required]
         [Display(Name = "Sobrenome")]
-        [StringLength(250)]
+        [StringLength(250, ErrorMessage = "O sobrenome pode ter 250 caracteres")]
         public string SobreNome { get; set; }
 
         [DataType(DataType.Date)]
@@ -35,7 +35,7 @@ namespace EscolaSagawe.Models
             }
         }
 
-        public ICollection<CursoAdministrado> cursosAdministrados { get; set; }
+        public ICollection<Curso> Cursos { get; set; }
         public Sala sala { get; set; }
 
     }

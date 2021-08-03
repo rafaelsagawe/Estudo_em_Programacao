@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -12,13 +11,13 @@ namespace EscolaSagawe.Models
     {
         public int ID { get; set; }
 
-        [StringLength(250)]
+        [StringLength(50, ErrorMessage = "O nome deve ter no maximo 50 caracteres")]
         [RegularExpression(@"^[A-Z]+[a-zA-Z]*$")]
         [Required]
         public string Nome { get; set; }
 
         [Required]
-        [StringLength(250)]
+        [StringLength(250, ErrorMessage = "O sobrenome deve ter no maximo 250 caracteres")]
         public string Sobrenome { get; set; }
 
         [Required]

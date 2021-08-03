@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EscolaSagawe.Migrations
 {
     [DbContext(typeof(EscolaContext))]
-    [Migration("20210802192838_ComplexDataModel")]
-    partial class ComplexDataModel
+    [Migration("20210803003149_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,21 @@ namespace EscolaSagawe.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.8")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("CursoInstrutor", b =>
+                {
+                    b.Property<int>("CursosCursoID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("InstrutorsID")
+                        .HasColumnType("int");
+
+                    b.HasKey("CursosCursoID", "InstrutorsID");
+
+                    b.HasIndex("InstrutorsID");
+
+                    b.ToTable("CursoInstrutor");
+                });
 
             modelBuilder.Entity("EscolaSagawe.Models.Curso", b =>
                 {
@@ -40,22 +55,7 @@ namespace EscolaSagawe.Migrations
 
                     b.HasIndex("DepartamentoID");
 
-                    b.ToTable("Cursos");
-                });
-
-            modelBuilder.Entity("EscolaSagawe.Models.CursoAdministrado", b =>
-                {
-                    b.Property<int>("CursoID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("InstrutorID")
-                        .HasColumnType("int");
-
-                    b.HasKey("CursoID", "InstrutorID");
-
-                    b.HasIndex("InstrutorID");
-
-                    b.ToTable("CursosAdministrados");
+                    b.ToTable("Curso");
                 });
 
             modelBuilder.Entity("EscolaSagawe.Models.Departamento", b =>
@@ -97,8 +97,8 @@ namespace EscolaSagawe.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Sobrenome")
                         .IsRequired()
@@ -107,7 +107,7 @@ namespace EscolaSagawe.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Estudantes");
+                    b.ToTable("Estudante");
                 });
 
             modelBuilder.Entity("EscolaSagawe.Models.Instrutor", b =>
@@ -122,8 +122,8 @@ namespace EscolaSagawe.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("SobreNome")
                         .IsRequired()
@@ -132,7 +132,7 @@ namespace EscolaSagawe.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Instrutors");
+                    b.ToTable("Instrutor");
                 });
 
             modelBuilder.Entity("EscolaSagawe.Models.Matricula", b =>
@@ -174,6 +174,21 @@ namespace EscolaSagawe.Migrations
                     b.ToTable("Salas");
                 });
 
+            modelBuilder.Entity("CursoInstrutor", b =>
+                {
+                    b.HasOne("EscolaSagawe.Models.Curso", null)
+                        .WithMany()
+                        .HasForeignKey("CursosCursoID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EscolaSagawe.Models.Instrutor", null)
+                        .WithMany()
+                        .HasForeignKey("InstrutorsID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("EscolaSagawe.Models.Curso", b =>
                 {
                     b.HasOne("EscolaSagawe.Models.Departamento", "Departamento")
@@ -183,25 +198,6 @@ namespace EscolaSagawe.Migrations
                         .IsRequired();
 
                     b.Navigation("Departamento");
-                });
-
-            modelBuilder.Entity("EscolaSagawe.Models.CursoAdministrado", b =>
-                {
-                    b.HasOne("EscolaSagawe.Models.Curso", "Curso")
-                        .WithMany("cursoAdministrados")
-                        .HasForeignKey("CursoID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("EscolaSagawe.Models.Instrutor", "Instrutor")
-                        .WithMany("cursosAdministrados")
-                        .HasForeignKey("InstrutorID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Curso");
-
-                    b.Navigation("Instrutor");
                 });
 
             modelBuilder.Entity("EscolaSagawe.Models.Departamento", b =>
@@ -245,8 +241,6 @@ namespace EscolaSagawe.Migrations
 
             modelBuilder.Entity("EscolaSagawe.Models.Curso", b =>
                 {
-                    b.Navigation("cursoAdministrados");
-
                     b.Navigation("Matriculas");
                 });
 
@@ -262,8 +256,6 @@ namespace EscolaSagawe.Migrations
 
             modelBuilder.Entity("EscolaSagawe.Models.Instrutor", b =>
                 {
-                    b.Navigation("cursosAdministrados");
-
                     b.Navigation("sala");
                 });
 #pragma warning restore 612, 618

@@ -155,9 +155,9 @@ C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\R
 C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\Razor\Views\Matriculas\Details.cshtml.g.cs
 C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\Razor\Views\Matriculas\Edit.cshtml.g.cs
 C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\Razor\Views\Matriculas\Index.cshtml.g.cs
-C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\EscolaSagawe.csproj.AssemblyReference.cache
 C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\Razor\Views\Cursos\Create.cshtml.g.cs
 C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\Razor\Views\Cursos\Delete.cshtml.g.cs
 C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\Razor\Views\Cursos\Details.cshtml.g.cs
 C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\Razor\Views\Cursos\Edit.cshtml.g.cs
 C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\Razor\Views\Cursos\Index.cshtml.g.cs
+C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\EscolaSagawe.csproj.AssemblyReference.cache
