@@ -35,8 +35,8 @@ namespace EscolaSagawe.Models
             }
         }
 
-        public ICollection<Curso> Cursos { get; set; }
-        public Sala sala { get; set; }
+        public ICollection<CursoAdministrado> CursoAdministrados { get; set; }
+        public Sala Sala { get; set; }
 
     }
 }

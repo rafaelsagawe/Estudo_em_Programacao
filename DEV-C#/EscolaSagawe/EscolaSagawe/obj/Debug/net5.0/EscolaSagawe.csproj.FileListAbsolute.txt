@@ -161,3 +161,8 @@ C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\R
 C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\Razor\Views\Cursos\Edit.cshtml.g.cs
 C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\Razor\Views\Cursos\Index.cshtml.g.cs
 C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\EscolaSagawe.csproj.AssemblyReference.cache
+C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\Razor\Views\Instrutors\Create.cshtml.g.cs
+C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\Razor\Views\Instrutors\Delete.cshtml.g.cs
+C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\Razor\Views\Instrutors\Details.cshtml.g.cs
+C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\Razor\Views\Instrutors\Edit.cshtml.g.cs
+C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\Razor\Views\Instrutors\Index.cshtml.g.cs
