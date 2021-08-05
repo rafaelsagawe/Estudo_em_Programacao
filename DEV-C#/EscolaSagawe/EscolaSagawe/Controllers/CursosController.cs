@@ -20,15 +20,14 @@ namespace EscolaSagawe.Controllers
         }
 
         // GET: Cursos
-        /*
+        /* Original
         public async Task<IActionResult> Index()
         {
             var escolaContext = _context.Cursos.Include(c => c.Departamento);
             return View(await escolaContext.ToListAsync());
         }
         */
-        
-        // Index tutorial
+
         public async Task<IActionResult> Index()
         {
             var cursos = _context.Cursos
@@ -37,7 +36,6 @@ namespace EscolaSagawe.Controllers
             return View(await cursos.ToArrayAsync());
         }
 
-        
 
         // GET: Cursos/Details/5
         public async Task<IActionResult> Details(int? id)
