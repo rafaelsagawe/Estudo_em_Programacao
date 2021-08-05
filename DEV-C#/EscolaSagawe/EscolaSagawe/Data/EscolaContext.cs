@@ -19,6 +19,15 @@ namespace EscolaSagawe.Data
         public DbSet<Departamento> Departamentos { get; set; }
         public DbSet<Instrutor> Instrutors { get; set; }
         public DbSet<Sala> Salas { get; set; }
+        public DbSet<CursoAdministrado> cursoAdministrados { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<CursoAdministrado>()
+                .HasKey(c => new { c.CursoID, c.InstrutorID });
+        }
+
+        /*
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Curso>().ToTable(nameof(Curso))
@@ -27,7 +36,6 @@ namespace EscolaSagawe.Data
             modelBuilder.Entity<Estudante>().ToTable(nameof(Estudante));
             modelBuilder.Entity<Instrutor>().ToTable(nameof(Instrutor));
         }
-
-
+        */
     }
 }

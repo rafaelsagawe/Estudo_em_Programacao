@@ -39,12 +39,22 @@ namespace EscolaSagawe.Controllers
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.ID == id);
 
+            // Bloco do botão proxomo 
+            // https://stackoverflow.com/questions/20250828/go-to-next-record-from-asp-net-mvc-view
+            var proximoEstudante = _context.Estudantes.OrderBy(i => i.ID)
+                                    .First(i => i.ID > estudante.ID).ID;
+                            ViewBag.proximoEstudante = proximoEstudante;
+            // ToDo Falta tratar o erro ao não achar ID
+            // Bloco do botão proxomo
+
+
+
             if (estudante == null)
             {
                 return NotFound();
             }
-
             return View(estudante);
+
         }
 
         // GET: Estudantes/Create
