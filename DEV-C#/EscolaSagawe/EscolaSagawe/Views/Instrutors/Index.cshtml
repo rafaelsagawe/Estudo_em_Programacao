@@ -1,10 +1,10 @@
-﻿@model IEnumerable<EscolaSagawe.Models.EscolaViewModels.InstrutorIndexDados>
+﻿@model EscolaSagawe.Models.EscolaViewModels.InstrutorIndexDados
 
 @{
-    ViewData["Title"] = "Instrutores";
+    ViewData["Title"] = "Instructors";
 }
 
-<h1>Professores</h1>
+<h2>Instructors</h2>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -12,58 +12,117 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Nome</th>
-            <th>Sobrenome</th>
-            <th>Data de Admição</th>
-            <th>Sala</th>
-            <th>Sala</th>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Hire Date</th>
+            <th>Office</th>
+            <th>Courses</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
-
-
-@foreach (var item in Model)
-{
-    string selectedRow = "";
-    if (item.ID == (int?)ViewData["InstrutorID"])
-    {
-        selectedRow = "table-success";
-    }
-
-        <tr class="@selectedRow">
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SobreNome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataAdmicacao)
-            </td>
-
-
-            <td>
-                @if (item.Sala != null)
-                {
-                    @item.Sala.Localizacao
-                }
-            </td>
-
-            <td>
-                @foreach (var curso in item.CursoAdministrados)
-                {
-                    @curso.Curso.CursoID @curso.Curso.Titulo<br />
-                }
-            </td>
-
-            <td>
-                <a asp-action="Index" asp-route-id="@item.ID">Selecionar</a> |
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-
-        </tr>
+        @foreach (var item in Model.Instrutors)
+        {
+            string selectedRow = "";
+            if (item.ID == (int?)ViewData["InstrutorID"])
+            {
+                selectedRow = "table-success";
+            }
+            <tr class="@selectedRow">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SobreNome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataAdmicacao)
+                </td>
+                <td>
+                    @if (item.Sala != null)
+                    {
+                        @item.Sala.Localizacao
+                    }
+                </td>
+                <td>
+                    @foreach (var curso in item.CursoAdministrados)
+                    {
+                        @curso.Curso.CursoID @curso.Curso.Titulo<br />
+                    }
+                </td>
+                <td>
+                    <a asp-action="Index" asp-route-id="@item.ID">Select</a> |
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>
+
+<!--Bloco do botão de seleção-->
+<!-- Cursos do instrutor-->
+@if (Model.Cursos != null)
+{
+    <h3>Cursos Administrados</h3>
+    <table class="table">
+        <tr>
+            <th></th>
+            <th>Codigo</th>
+            <th>Titulo</th>
+            <th>Departamento</th>
+        </tr>
+
+        @foreach (var item in Model.Cursos)
+        {
+            string selectedRow = "";
+            if (item.CursoID == (int?)ViewData["CursoID"])
+            {
+                selectedRow = "success";
+            }
+            <tr class="@selectedRow">
+                <td>
+                    @Html.ActionLink("Select", "Index", new { CursoID = item.CursoID })
+                </td>
+                <td>
+                    @item.CursoID
+                </td>
+                <td>
+                    @item.Titulo
+                </td>
+                <td>
+                    @item.Departamento.Nome
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+
+<!-- Estudantes da Instrutor -->
+@if (Model.Matriculas != null)
+{
+    <h3>
+        Estudantes matriculados no curso
+    </h3>
+    <table class="table">
+        <tr>
+            <th>Nome</th>
+            <th>Grade</th>
+        </tr>
+        @foreach (var item in Model.Matriculas)
+        {
+            <tr>
+                <td>
+                    @item.Estudante.NomeCompleto
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Grade)
+                </td>
+            </tr>
+        }
+    </table>
+}
+
+

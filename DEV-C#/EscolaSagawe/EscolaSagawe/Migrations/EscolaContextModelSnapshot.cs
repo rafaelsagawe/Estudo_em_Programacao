@@ -19,21 +19,6 @@ namespace EscolaSagawe.Migrations
                 .HasAnnotation("ProductVersion", "5.0.8")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("CursoInstrutor", b =>
-                {
-                    b.Property<int>("CursosCursoID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("InstrutorsID")
-                        .HasColumnType("int");
-
-                    b.HasKey("CursosCursoID", "InstrutorsID");
-
-                    b.HasIndex("InstrutorsID");
-
-                    b.ToTable("CursoInstrutor");
-                });
-
             modelBuilder.Entity("EscolaSagawe.Models.Curso", b =>
                 {
                     b.Property<int>("CursoID")
@@ -130,6 +115,9 @@ namespace EscolaSagawe.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("CursoID")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("DataAdmicacao")
                         .HasColumnType("datetime2");
 
@@ -144,6 +132,8 @@ namespace EscolaSagawe.Migrations
                         .HasColumnType("nvarchar(250)");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("CursoID");
 
                     b.ToTable("Instrutors");
                 });
@@ -187,21 +177,6 @@ namespace EscolaSagawe.Migrations
                     b.ToTable("Salas");
                 });
 
-            modelBuilder.Entity("CursoInstrutor", b =>
-                {
-                    b.HasOne("EscolaSagawe.Models.Curso", null)
-                        .WithMany()
-                        .HasForeignKey("CursosCursoID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("EscolaSagawe.Models.Instrutor", null)
-                        .WithMany()
-                        .HasForeignKey("InstrutorsID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("EscolaSagawe.Models.Curso", b =>
                 {
                     b.HasOne("EscolaSagawe.Models.Departamento", "Departamento")
@@ -222,7 +197,7 @@ namespace EscolaSagawe.Migrations
                         .IsRequired();
 
                     b.HasOne("EscolaSagawe.Models.Instrutor", "Instrutor")
-                        .WithMany()
+                        .WithMany("CursoAdministrados")
                         .HasForeignKey("InstrutorID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -239,6 +214,13 @@ namespace EscolaSagawe.Migrations
                         .HasForeignKey("InstrutorID");
 
                     b.Navigation("Administrador");
+                });
+
+            modelBuilder.Entity("EscolaSagawe.Models.Instrutor", b =>
+                {
+                    b.HasOne("EscolaSagawe.Models.Curso", null)
+                        .WithMany("Instrutors")
+                        .HasForeignKey("CursoID");
                 });
 
             modelBuilder.Entity("EscolaSagawe.Models.Matricula", b =>
@@ -263,7 +245,7 @@ namespace EscolaSagawe.Migrations
             modelBuilder.Entity("EscolaSagawe.Models.Sala", b =>
                 {
                     b.HasOne("EscolaSagawe.Models.Instrutor", "Instrutor")
-                        .WithOne("sala")
+                        .WithOne("Sala")
                         .HasForeignKey("EscolaSagawe.Models.Sala", "InstrutorID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -273,6 +255,8 @@ namespace EscolaSagawe.Migrations
 
             modelBuilder.Entity("EscolaSagawe.Models.Curso", b =>
                 {
+                    b.Navigation("Instrutors");
+
                     b.Navigation("Matriculas");
                 });
 
@@ -288,7 +272,9 @@ namespace EscolaSagawe.Migrations
 
             modelBuilder.Entity("EscolaSagawe.Models.Instrutor", b =>
                 {
-                    b.Navigation("sala");
+                    b.Navigation("CursoAdministrados");
+
+                    b.Navigation("Sala");
                 });
 #pragma warning restore 612, 618
         }

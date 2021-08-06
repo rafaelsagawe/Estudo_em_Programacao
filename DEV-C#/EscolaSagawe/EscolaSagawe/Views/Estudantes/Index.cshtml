@@ -7,7 +7,7 @@
 <h1>Index</h1>
 
 <p>
-    <a class="btn btn-primary " asp-action="Create">Novo Estudante</a>
+    <a class="btn btn-outline-primary " asp-action="Create">Novo Estudante</a>
 </p>
 <table id="Estudantes" class="table">
     <thead>
@@ -37,9 +37,9 @@
                 @Html.DisplayFor(modelItem => item.DataMatricula)
             </td>
             <td>
-                <a class="btn btn-warning m-1" asp-action="Edit" asp-route-id="@item.ID">Edit</a> 
-                <a class="btn btn-info m-1" asp-action="Details" asp-route-id="@item.ID">Details</a> 
-                <a class="btn btn-danger m-1" asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                <a class="btn btn-outline-warning m-1" asp-action="Edit" asp-route-id="@item.ID">Edit</a> 
+                <a class="btn btn-outline-info m-1" asp-action="Details" asp-route-id="@item.ID">Details</a> 
+                <a class="btn btn-outline-danger m-1" asp-action="Delete" asp-route-id="@item.ID">Delete</a>
             </td>
         </tr>
 }

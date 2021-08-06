@@ -46,8 +46,7 @@ namespace EscolaSagawe.Controllers
             if (id != null)
             {
                 ViewData["InstrutorID"] = id.Value;
-                Instrutor instrutor = viewModel.Instrutors.Where(
-                    i => i.ID == id.Value).Single();
+                Instrutor instrutor = viewModel.Instrutors.Single(i => i.ID == id.Value);
                 viewModel.Cursos = instrutor.CursoAdministrados.Select(s => s.Curso);
             }
 
