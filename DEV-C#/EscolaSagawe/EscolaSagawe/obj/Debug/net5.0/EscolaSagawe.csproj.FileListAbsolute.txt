@@ -166,3 +166,4 @@ C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\R
 C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\Razor\Views\Instrutors\Details.cshtml.g.cs
 C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\Razor\Views\Instrutors\Edit.cshtml.g.cs
 C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\Razor\Views\Instrutors\Index.cshtml.g.cs
+C:\git\Estudo_em_Programacao\DEV-C#\EscolaSagawe\EscolaSagawe\bin\Debug\net5.0\Microsoft.VisualStudio.Web.BrowserLink.dll

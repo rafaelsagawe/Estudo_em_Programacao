@@ -2,34 +2,38 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="jumbotron">
+<div class="alert alert-primary">
     <h1 class="text-center" >Escola Sagawe</h1>
 </div>
 
-<div class="row">
-    <div class="shadow col-md-4 bg-white rounded">
-        <h2 class="card-header text-center">Bem-Vindo</h2>
-        <p>
-            A Escola Sagawe é um projeto de estudos usando o ASP.NET Cores, Entity Framework Core, SQLServer entre outras tecnologias da Microsoft 
-        </p>
-        <p>O projeto tambem será em portugues (com alguns erros 😅 )</p>
+<div class="container-fluid">
+    <div class="card-deck">
+        <div class="card col-md-4 rounded">
+            <h2 class="card-header text-center">Bem-Vindo</h2>
+            <p>
+                A Escola Sagawe é um projeto de estudos usando o ASP.NET Cores, Entity Framework Core, SQLServer entre outras tecnologias da Microsoft
+            </p>
+            <p>O projeto tambem será em portugues (com alguns erros 😅 )</p>
+        </div>
+
+        <div class="card col-md-4 rounded">
+            <h2 class="card-header text-center">Fonte</h2>
+            <p><a target="_blank" href="https://docs.microsoft.com/pt-br/aspnet/core/data/ef-mvc/?view=aspnetcore-5.0">Tutorial Base</a></p>
+            <p><a target="_blank" href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">Material sobre HTML</a></p>
+            <p><a target="_blank" href="https://getbootstrap.com.br/docs/4.1/getting-started/introduction/">Material sobre Bootstrap</a></p>
+        </div>
+
+        <div class="card col-md-4 rounded">
+            <h2 class="card-header text-center">Extras usados</h2>
+            <ul>
+                <li>Atom One Dark Theme</li>
+            </ul>
+            <ul>
+                <li>Power Mode</li>
+            </ul>
+            <ul>
+                <li><a target="_blank" href="https://datatables.net">DataTables, Classificação, filtragem e paginação</a></li>
+            </ul>
+        </div>
     </div>
-
-    <div class="shadow col-md-4 bg-white rounded">
-        <h2 class="card-header text-center">Fonte</h2>
-        <p>Como base inicial foi usado o tutorias da propria microsoft.</p>
-
-        <p><a class="btn btn-default" href="https://docs.microsoft.com/pt-br/aspnet/core/data/ef-mvc/?view=aspnetcore-5.0">Este tutorial &raquo;</a></p>
-    </div>
-
-    <div class="shadow col-md-4 bg-white rounded">
-        <h2 class="card-header text-center">Extras usados</h2>
-        <p>
-            Atom One Dark Theme
-        </p>
-        <p>Power Mode</p>
-        <p><a href="https://datatables.net">DataTables, Classificação, filtragem e paginação</a></p>
-
-</div>
-
 </div>

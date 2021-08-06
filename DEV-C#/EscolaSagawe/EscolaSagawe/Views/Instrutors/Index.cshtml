@@ -4,10 +4,10 @@
     ViewData["Title"] = "Instructors";
 }
 
-<h2>Instructors</h2>
+<h2>Instrutores</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Adcionar novo Inscrutor</a>
 </p>
 <table class="table">
     <thead>
@@ -26,7 +26,7 @@
             string selectedRow = "";
             if (item.ID == (int?)ViewData["InstrutorID"])
             {
-                selectedRow = "table-success";
+                selectedRow = "table-primary";
             }
             <tr class="@selectedRow">
                 <td>
@@ -51,17 +51,18 @@
                     }
                 </td>
                 <td>
-                    <a asp-action="Index" asp-route-id="@item.ID">Select</a> |
-                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    <div class="btn-group" role="group">
+                        <a asp-action="Index" class="btn btn-outline-primary" asp-route-id="@item.ID">Selecionar</a>
+                        <a asp-action="Edit" class="btn btn-outline-secondary" asp-route-id="@item.ID">Editar</a>
+                        <a asp-action="Details" class="btn btn-outline-warning" asp-route-id="@item.ID">Detalhes</a>
+                        <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.ID">Excluir</a>
+                    </div>
                 </td>
             </tr>
         }
     </tbody>
 </table>
 
-<<<<<<< HEAD
 <!--Bloco do botão de seleção-->
 <!-- Cursos do instrutor-->
 @if (Model.Cursos != null)
@@ -80,22 +81,25 @@
             string selectedRow = "";
             if (item.CursoID == (int?)ViewData["CursoID"])
             {
-                selectedRow = "success";
+                selectedRow = "alert-primary";
             }
-            <tr class="@selectedRow">
-                <td>
-                    @Html.ActionLink("Select", "Index", new { CursoID = item.CursoID })
-                </td>
-                <td>
-                    @item.CursoID
-                </td>
-                <td>
-                    @item.Titulo
-                </td>
-                <td>
-                    @item.Departamento.Nome
-                </td>
-            </tr>
+    <tr class="@selectedRow">
+        <td>
+            <button class="btn  btn-outline-primary">
+                @Html.ActionLink("Select", "Index", new { CursoID = item.CursoID })
+            </button>
+        </td>
+        <td>
+            @item.CursoID
+        </td>
+        <td>
+            @item.Titulo
+        </td>
+        <td>
+            @item.Departamento.Nome
+        </td>
+
+    </tr>
         }
 
     </table>
@@ -125,11 +129,3 @@
         }
     </table>
 }
-
-
-=======
-
-
-    </tbody>
-</table>
->>>>>>> eb96abf38ba562dda40a927748f218c4cf777208
