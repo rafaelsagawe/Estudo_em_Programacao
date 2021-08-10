@@ -10,11 +10,14 @@
         "projectUniqueName": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\EscolaSagawe\\EscolaSagawe\\EscolaSagawe.csproj",
         "projectName": "EscolaSagawe",
         "projectPath": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\EscolaSagawe\\EscolaSagawe\\EscolaSagawe.csproj",
-        "packagesPath": "C:\\Users\\sagaw\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\rafael.sagawe\\.nuget\\packages\\",
         "outputPath": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\EscolaSagawe\\EscolaSagawe\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sagaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rafael.sagawe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

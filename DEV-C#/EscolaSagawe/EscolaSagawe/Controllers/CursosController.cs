@@ -59,7 +59,8 @@ namespace EscolaSagawe.Controllers
         // GET: Cursos/Create
         public IActionResult Create()
         {
-            ViewData["DepartamentoID"] = new SelectList(_context.Departamentos, "DepartamentoID", "DepartamentoID");
+            //ViewData["DepartamentoID"] = new SelectList(_context.Departamentos, "DepartamentoID", "DepartamentoID");
+            PopularDepartamentoDropDownList();
             return View();
         }
 
@@ -70,14 +71,25 @@ namespace EscolaSagawe.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CursoID,Titulo,Notas,DepartamentoID")] Curso curso)
         {
+            /* if (ModelState.IsValid)
+             {
+                 _context.Add(curso);
+                 await _context.SaveChangesAsync();
+                 return RedirectToAction(nameof(Index));
+             }
+
+             ViewData["DepartamentoID"] = new SelectList(_context.Departamentos, "DepartamentoID", "DepartamentoID", curso.DepartamentoID);
+             return View(curso);
+            */
             if (ModelState.IsValid)
             {
                 _context.Add(curso);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DepartamentoID"] = new SelectList(_context.Departamentos, "DepartamentoID", "DepartamentoID", curso.DepartamentoID);
+            PopularDepartamentoDropDownList(curso.DepartamentoID);
             return View(curso);
+
         }
 
         // GET: Cursos/Edit/5
@@ -88,13 +100,25 @@ namespace EscolaSagawe.Controllers
                 return NotFound();
             }
 
+            var curso = await _context.Cursos
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.CursoID == id);
+            if (curso == null)
+            {
+                return NotFound();
+            }
+            PopularDepartamentoDropDownList(curso.DepartamentoID);
+            return View(curso);
+
+            /*
             var curso = await _context.Cursos.FindAsync(id);
             if (curso == null)
             {
                 return NotFound();
             }
             ViewData["DepartamentoID"] = new SelectList(_context.Departamentos, "DepartamentoID", "DepartamentoID", curso.DepartamentoID);
-            return View(curso);
+            return View(curso);*/
+
         }
 
         // POST: Cursos/Edit/5
@@ -104,33 +128,69 @@ namespace EscolaSagawe.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("CursoID,Titulo,Notas,DepartamentoID")] Curso curso)
         {
-            if (id != curso.CursoID)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            var cursoParaAtualizar = await _context.Cursos
+                .FirstOrDefaultAsync(c => c.CursoID == id);
+
+            if (await TryUpdateModelAsync<Curso>(cursoParaAtualizar,
+                "",
+                c => c.Notas, c => c.DepartamentoID, c => c.Titulo))
             {
                 try
                 {
-                    _context.Update(curso);
                     await _context.SaveChangesAsync();
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (DbUpdateException /* ex */)
                 {
-                    if (!CursoExists(curso.CursoID))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    //Log the error (uncomment ex variable name and write a log.)
+                    ModelState.AddModelError("", "Unable to save changes. " +
+                        "Try again, and if the problem persists, " +
+                        "see your system administrator.");
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DepartamentoID"] = new SelectList(_context.Departamentos, "DepartamentoID", "DepartamentoID", curso.DepartamentoID);
-            return View(curso);
+            PopularDepartamentoDropDownList(cursoParaAtualizar.DepartamentoID);
+            return View(cursoParaAtualizar);
+
+            /* if (id != curso.CursoID)
+             {
+                 return NotFound();
+             }
+
+             if (ModelState.IsValid)
+             {
+                 try
+                 {
+                     _context.Update(curso);
+                     await _context.SaveChangesAsync();
+                 }
+                 catch (DbUpdateConcurrencyException)
+                 {
+                     if (!CursoExists(curso.CursoID))
+                     {
+                         return NotFound();
+                     }
+                     else
+                     {
+                         throw;
+                     }
+                 }
+                 return RedirectToAction(nameof(Index));
+             }
+             ViewData["DepartamentoID"] = new SelectList(_context.Departamentos, "DepartamentoID", "DepartamentoID", curso.DepartamentoID);
+             return View(curso);*/
+        }
+
+        private void PopularDepartamentoDropDownList(object selecaoDepartamento = null)
+        {
+            var consultaDepartamento = from d in _context.Departamentos
+                                       orderby d.Nome
+                                       select d;
+            ViewBag.DepartamentoID = new SelectList(consultaDepartamento.AsNoTracking(), "DepartamentoID", "Nome", selecaoDepartamento);
         }
 
         // GET: Cursos/Delete/5
