@@ -8,32 +8,76 @@
 
 <div class="container-fluid">
     <div class="card-deck">
-        <div class="card col-md-4 rounded">
+        <div class="card rounded">
             <h2 class="card-header text-center">Bem-Vindo</h2>
-            <p>
+            <div class="card-body text-justify">
                 A Escola Sagawe é um projeto de estudos usando o ASP.NET Cores, Entity Framework Core, SQLServer entre outras tecnologias da Microsoft
-            </p>
-            <p>O projeto tambem será em portugues (com alguns erros 😅 )</p>
+            </div>
+            <div class="card-footer text-center">O projeto tambem será em portugues (com alguns erros 😅 )</div>
         </div>
 
-        <div class="card col-md-4 rounded">
+        <div class="card rounded list-group">
             <h2 class="card-header text-center">Fonte</h2>
-            <p><a target="_blank" href="https://docs.microsoft.com/pt-br/aspnet/core/data/ef-mvc/?view=aspnetcore-5.0">Tutorial Base</a></p>
-            <p><a target="_blank" href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">Material sobre HTML</a></p>
-            <p><a target="_blank" href="https://getbootstrap.com.br/docs/4.1/getting-started/introduction/">Material sobre Bootstrap</a></p>
+            <div class="card-body ">
+                <a target="_blank" href="https://docs.microsoft.com/pt-br/aspnet/core/data/ef-mvc/?view=aspnetcore-5.0" class="list-group list-group-item list-group-item-action">Tutorial Base</a>
+                
+                <a target="_blank" href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"class="list-group list-group-item list-group-item-action">Material sobre HTML</a>
+                
+                <a target="_blank" href="https://getbootstrap.com.br/docs/4.1/getting-started/introduction/"class="list-group list-group-item list-group-item-action">Material sobre Bootstrap</a>
+            </div>
         </div>
 
-        <div class="card col-md-4 rounded">
+        <div class="card rounded">
             <h2 class="card-header text-center">Extras usados</h2>
-            <ul>
-                <li>Atom One Dark Theme</li>
-            </ul>
-            <ul>
-                <li>Power Mode</li>
-            </ul>
-            <ul>
-                <li><a target="_blank" href="https://datatables.net">DataTables, Classificação, filtragem e paginação</a></li>
-            </ul>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Atom One Dark Theme</li>
+      
+                <li class="list-group-item">Power Mode</li>
+
+                <li class="list-group-item"><a target="_blank" href="https://datatables.net">DataTables, Classificação, filtragem e paginação</a></li>
+                </ul>
         </div>
     </div>
 </div>
+<br/>
+
+<div class="alert alert-primary text-center">
+    <label> Estatisticas </label>
+</div>
+
+
+<div class="card-deck">
+
+    <div class="card bg-secondary text-white">
+        <div class="card-header text-center">
+            Quantidade de Alunos
+        </div>
+
+        <div class="card-body">
+            Numero de alunos gedado do banco de dados
+        </div>
+    </div>
+
+
+    <div class="card bg-primary text-white">
+        <div class=" card-header text-center">
+            Quantidade de Cursos
+        </div>
+
+        <div class="card-body">
+            Numero de cursos gedado do banco de dados
+        </div>
+    </div>
+
+    <div class="card bg-success text-white">
+        <div class=" card-header text-center">
+            Quantidade de Instrutores
+        </div>
+
+        <div class="card-body">
+            Numero de Instrutores gedado do banco de dados
+        </div>
+    </div>
+</div>
+   

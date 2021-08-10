@@ -45,7 +45,7 @@ namespace EscolaSagawe.Controllers
                                     .First(i => i.ID > estudante.ID).ID;
                             ViewBag.proximoEstudante = proximoEstudante;
             // ToDo Falta tratar o erro ao não achar ID
-            // Bloco do botão proxomo
+            // Bloco do botão proximo
 
 
 

@@ -28,6 +28,17 @@ namespace EscolaSagawe.Controllers
         }
         */
 
+        private void PopularDepartamentoDropDownList(object selecaoDepartamento = null)
+        {
+            // Metodo respansavel por obter a listagem de departamentos para a criação da coleção/Seleção selecaoDepartamento, por fim lança esta coleção na ViewBag para utilização nas View
+
+            var consultaDepartamento = from d in _context.Departamentos
+                                       orderby d.Nome // Realiza a ordenação 
+                                       select d;
+            ViewBag.DepartamentoID = new SelectList(consultaDepartamento.AsNoTracking(), "DepartamentoID", "Nome", selecaoDepartamento);
+        }
+
+        // Montagem da pagina Index
         public async Task<IActionResult> Index()
         {
             var cursos = _context.Cursos
@@ -36,42 +47,25 @@ namespace EscolaSagawe.Controllers
             return View(await cursos.ToArrayAsync());
         }
 
+        // Montagem da pagina Detalhes
+        // ToDo Adição do model Deparatamento na estrutura do curso
 
-        // GET: Cursos/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var curso = await _context.Cursos
-                .Include(c => c.Departamento)
-                .FirstOrDefaultAsync(m => m.CursoID == id);
-            if (curso == null)
-            {
-                return NotFound();
-            }
-
-            return View(curso);
-        }
-
-        // GET: Cursos/Create
+        // Montagem da pagina Adicionar
         public IActionResult Create()
         {
-            //ViewData["DepartamentoID"] = new SelectList(_context.Departamentos, "DepartamentoID", "DepartamentoID");
+            /* Conteudo original
+             * ViewData["DepartamentoID"] = new SelectList(_context.Departamentos, "DepartamentoID", "DepartamentoID");
+             */
             PopularDepartamentoDropDownList();
             return View();
         }
 
-        // POST: Cursos/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CursoID,Titulo,Notas,DepartamentoID")] Curso curso)
         {
-            /* if (ModelState.IsValid)
+            /* Conteudo original
+             if (ModelState.IsValid)
              {
                  _context.Add(curso);
                  await _context.SaveChangesAsync();
@@ -92,7 +86,31 @@ namespace EscolaSagawe.Controllers
 
         }
 
-        // GET: Cursos/Edit/5
+
+
+
+
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var curso = await _context.Cursos
+                .Include(c => c.Departamento) 
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.CursoID == id);
+            if (curso == null)
+            {
+                return NotFound();
+            }
+
+            return View(curso);
+        }
+
+       
+        // Montagem da pagina Editar 
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -110,7 +128,7 @@ namespace EscolaSagawe.Controllers
             PopularDepartamentoDropDownList(curso.DepartamentoID);
             return View(curso);
 
-            /*
+            /* Conteudo original
             var curso = await _context.Cursos.FindAsync(id);
             if (curso == null)
             {
@@ -121,9 +139,6 @@ namespace EscolaSagawe.Controllers
 
         }
 
-        // POST: Cursos/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("CursoID,Titulo,Notas,DepartamentoID")] Curso curso)
@@ -156,7 +171,8 @@ namespace EscolaSagawe.Controllers
             PopularDepartamentoDropDownList(cursoParaAtualizar.DepartamentoID);
             return View(cursoParaAtualizar);
 
-            /* if (id != curso.CursoID)
+            /* Conteudo original 
+             if (id != curso.CursoID)
              {
                  return NotFound();
              }
@@ -185,13 +201,7 @@ namespace EscolaSagawe.Controllers
              return View(curso);*/
         }
 
-        private void PopularDepartamentoDropDownList(object selecaoDepartamento = null)
-        {
-            var consultaDepartamento = from d in _context.Departamentos
-                                       orderby d.Nome
-                                       select d;
-            ViewBag.DepartamentoID = new SelectList(consultaDepartamento.AsNoTracking(), "DepartamentoID", "Nome", selecaoDepartamento);
-        }
+
 
         // GET: Cursos/Delete/5
         public async Task<IActionResult> Delete(int? id)
@@ -203,6 +213,7 @@ namespace EscolaSagawe.Controllers
 
             var curso = await _context.Cursos
                 .Include(c => c.Departamento)
+                .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.CursoID == id);
             if (curso == null)
             {
@@ -212,7 +223,6 @@ namespace EscolaSagawe.Controllers
             return View(curso);
         }
 
-        // POST: Cursos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

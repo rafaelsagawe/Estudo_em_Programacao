@@ -9,7 +9,11 @@
 <p>
     <a asp-action="Create">Criar novo curso</a>
 </p>
-<table class="table">
+<table id="Cursos" class="table table-striped">
+    <!--
+    id="Cursos" -> para o funcionamento do DataTables
+        class="table table-striped" -> gera a tabela com linhas alternadas
+    -->
     <thead>
         <tr>
             <th>
@@ -28,26 +32,42 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CursoID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Titulo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Notas)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Departamento.Nome)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.CursoID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CursoID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CursoID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CursoID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Notas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Departamento.Nome)
+                </td>
+                <td>
+                    <div class="btn-group">
+                        <a class="btn btn-outline-warning" asp-action="Edit" asp-route-id="@item.CursoID">Edit</a> 
+                        <a class="btn btn-outline-primary" asp-action="Details" asp-route-id="@item.CursoID">Details</a> 
+                        <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.CursoID">Delete</a>
+                    </div>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+@section Scripts{
+    <!-- Scripts em JavaScript-->
+    <script>
+    $(document).ready(function () {
+        $('#Cursos').DataTable({
+            "language": {
+                "url": "http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json"
+            }
+        });
+    });
+    </script>
+}
