@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogCoreCodeFist", "BlogCoreCodeFist\BlogCoreCodeFist.csproj", "{EAC861AD-AE66-400A-93B6-074EE9F7287E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{071AE47D-902C-4154-830A-A8F28A2DABDE}"
+	ProjectSection(SolutionItems) = preProject
+		Descrição do projeto.txt = Descrição do projeto.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogSagawe", "BlogSagawe\BlogSagawe.csproj", "{487F1298-007F-45E2-82B8-C03DEFD8A1D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAC861AD-AE66-400A-93B6-074EE9F7287E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC861AD-AE66-400A-93B6-074EE9F7287E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC861AD-AE66-400A-93B6-074EE9F7287E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC861AD-AE66-400A-93B6-074EE9F7287E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{487F1298-007F-45E2-82B8-C03DEFD8A1D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{487F1298-007F-45E2-82B8-C03DEFD8A1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{487F1298-007F-45E2-82B8-C03DEFD8A1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{487F1298-007F-45E2-82B8-C03DEFD8A1D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FAF61A0B-71E3-4FED-8F5A-B97A31B9064E}
+	EndGlobalSection
+EndGlobal
