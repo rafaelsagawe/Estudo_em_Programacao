@@ -28,17 +28,17 @@
                 <span asp-validation-for="Notas" class="text-danger"></span>
             </div>
 
-     <!-- <div class="form-group">
-         <label asp-for="DepartamentoID" class="control-label"></label>
-         <select asp-for="DepartamentoID" class ="form-control" asp-items="ViewBag.DepartamentoID"></select>
-     </div>-->
+            <!-- <div class="form-group">
+                <label asp-for="DepartamentoID" class="control-label"></label>
+                <select asp-for="DepartamentoID" class ="form-control" asp-items="ViewBag.DepartamentoID"></select>
+            </div>-->
 
             <div class="form-group">
                 <label asp-for="Departamento" class="control-label"></label>
-                <select asp-for="DepartamentoID" class="form-control"asp-items="ViewBag.DepartamentoID">
+                <select id="departamentos" asp-for="DepartamentoID" class="form-control" asp-items="ViewBag.DepartamentoID">
                     <option value=""> --  Selação de departamento -- </option>
                 </select>
-                <span asp-validation-for="DepartamentoID" class="text-danger"/>
+                <span asp-validation-for="DepartamentoID" class="text-danger" />
             </div>
 
 
@@ -53,6 +53,23 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
+<!--Listbox com texto (chosen)
+1 - Adicionar as referencias no arquivo _Layout.cshtml
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.3/chosen.css" rel="stylesheet"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.3/chosen.jquery.min.js"></script>
+2 - Criar o Scripts do uso das referencias Create.cshtml
+
+-->
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script type="text/javascript">
+        $(function () {
+            $("#departamentos").chosen();
+        })
+    </script>
+
 }
+
