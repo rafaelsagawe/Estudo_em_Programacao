@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MeuToDoApp.Data;
 using MeuToDoApp.Models;
+using Microsoft.AspNetCore.Authorization; // Ativação do [Authorize], só usuário podem visualizar tarefas
 
 namespace MeuToDoApp.Controllers
 {
+
+    [Authorize]
     public class TodosController : Controller
     {
         private readonly ApplicationDbContext _context;
