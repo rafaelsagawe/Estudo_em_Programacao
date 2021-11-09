@@ -1,0 +1,19 @@
+﻿
+--- 
+id_processo
+n_processo -> PROCESSO -> 2018/039525
+n_processo -> REQUERENTE -> SEMED
+assunto- -> ASSUNTO -> DIVERSOS OFS.MEM. 612/GAB/2018- ELABORAÇÃO DE TERMO DE COMPROMISSO
+data_criação -> DATA (de criação ??)
+
+
+DESTINAT.
+DATA
+DESTINO
+DATA
+
+
+DESTINAT.
+DATA
+DESTINO
+DATA

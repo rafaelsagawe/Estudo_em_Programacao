@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\git\\Estudo_em_Programacao\\DEV-C#\\Brazor\\TodoList\\TodoList.csproj": {}
+    "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\Brazor\\TodoList\\TodoList.csproj": {}
   },
   "projects": {
-    "C:\\git\\Estudo_em_Programacao\\DEV-C#\\Brazor\\TodoList\\TodoList.csproj": {
+    "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\Brazor\\TodoList\\TodoList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\Brazor\\TodoList\\TodoList.csproj",
+        "projectUniqueName": "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\Brazor\\TodoList\\TodoList.csproj",
         "projectName": "TodoList",
-        "projectPath": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\Brazor\\TodoList\\TodoList.csproj",
+        "projectPath": "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\Brazor\\TodoList\\TodoList.csproj",
         "packagesPath": "C:\\Users\\sagaw\\.nuget\\packages\\",
-        "outputPath": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\Brazor\\TodoList\\obj\\",
+        "outputPath": "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\Brazor\\TodoList\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sagaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -57,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
