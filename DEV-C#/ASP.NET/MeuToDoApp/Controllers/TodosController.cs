@@ -25,7 +25,10 @@ namespace MeuToDoApp.Controllers
         // GET: Todos
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Todos.ToListAsync());
+            return View(await _context.Todos
+                .AsNoTracking() // Não registar mudanças
+                .Where(x => x.Usuario == User.Identity.Name) // Função x é igual a x usuário do Identity, no index aparecera apenas as tarefas do proprio usuário
+                .ToListAsync());
         }
 
         // GET: Todos/Details/5
@@ -39,6 +42,12 @@ namespace MeuToDoApp.Controllers
             var todo = await _context.Todos
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (todo == null)
+            {
+                return NotFound();
+            }
+
+            // Usuário só pode acessa s sua Tarefa e não dos outros
+            if (todo.Usuario != User.Identity.Name)
             {
                 return NotFound();
             }
@@ -61,6 +70,7 @@ namespace MeuToDoApp.Controllers
         {
             if (ModelState.IsValid)
             {
+                todo.Usuario = User.Identity.Name; // Pega o usuário logado no sistema e salva na tabela
                 _context.Add(todo);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -81,6 +91,13 @@ namespace MeuToDoApp.Controllers
             {
                 return NotFound();
             }
+
+            // Usuário só pode acessa s sua Tarefa e não dos outros
+            if (todo.Usuario != User.Identity.Name)
+            {
+                return NotFound();
+            }
+
             return View(todo);
         }
 
@@ -116,6 +133,7 @@ namespace MeuToDoApp.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+
             return View(todo);
         }
 
@@ -130,6 +148,12 @@ namespace MeuToDoApp.Controllers
             var todo = await _context.Todos
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (todo == null)
+            {
+                return NotFound();
+            }
+
+            // Usuário só pode deletar s sua Tarefa e não dos outros
+            if (todo.Usuario != User.Identity.Name)
             {
                 return NotFound();
             }
