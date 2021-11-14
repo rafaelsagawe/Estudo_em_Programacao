@@ -4,10 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using BlogSagawe.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace BlogSagawe.Data
 {
-    public class BlogSagaweContext : DbContext
+    public class BlogSagaweContext : IdentityDbContext<Usuario>
     {
         public BlogSagaweContext (DbContextOptions<BlogSagaweContext> options)
             : base(options)

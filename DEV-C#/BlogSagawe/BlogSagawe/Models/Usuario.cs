@@ -9,10 +9,16 @@ namespace BlogSagawe.Models
 {
     public class Usuario : IdentityUser
     {
-        public int Id { get; set;}
+        // itens extras do usuario
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
-        public string Email { get; set; }
 
+    }
+
+    public class Regra : IdentityRole
+    {
+        public Regra() : base() { }
+        public Regra(string name) : base(name) { }
+        // propriedades extras
     }
 }

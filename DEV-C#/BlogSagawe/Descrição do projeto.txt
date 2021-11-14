@@ -1,3 +1,62 @@
+o Sistema deve ter:
+
+1 - Model;
+1.1 - Posts's:
+1.1.1 - IDPost;
+1.1.2 - NomePost;
+1.1.3 - ResumoPost;
+1.1.4 - ConteudoPost;
+1.1.5 - CategoriasPost;
+1.1.6 - DataPost;
+1.1.7 - UsuarioCriador
+
+1.2 - Categoria's
+1.2.1 - IdCategoria
+1.2.2 - Categoria
+
+=================
+
+2.2 - View
+2.2.1 - Lista deve conter:
+2.2.1.1 - NomePost;
+2.2.1.2 - ResumoPost;
+2.2.1.3 - ConteudoPost;
+
+------------------------------------
+2 - Os posts devem ter categorias (Área administrativa);
+2.1 - IDCategoria
+2.2 - NomeCategoria (obrigatorio);
+2.3 - DescricaaCategoria;
+
+3 - Autenticação de Usuários;
+    Na criação do projeto
+    Conta de Usuário Individual
+
+4 - Cada Usuário pode editar apenas seus posts;
+
+5 - Todos os Usuários podem ver os posts dos outros;
+
+6 - Perfil de administrador com poder total sobre a plataforma;
+
+7 - Banner com a contagem de posts, categorias e usuários no rodapé;
+
+X - Trasferir para SGBD de grande porte;
+
+X - Hospedar em servidor Linux;
+
+
+Desenvolvimento 
+
+Aplicativo web asp.net Core (MVC) -> o MVC proporciona melhor organização no desenvolvimento das aplicacações.
+
+* Model é criada através de arquivos do tipo "Classe";
+* Habilitar os dataAnotations - "using System.ComponentModel.DataAnnotations;";
+
+
+
+
+
+
 Entity Framework Code-First - Partindo de uma base existente e melhorando a nomenclatura
 https://www.youtube.com/watch?v=06ozoMruX_o
 
@@ -45,48 +104,3 @@ E o menu é insirido a estrutura no arquivo _Layout.cshtml;
         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Sobre">Sobre</a>
         </li>
 ==============================================
-
-o Sistema deve ter:
-1 - Posts;
-
-1.1 - Model:
-1.1.1 - IDPost;
-1.1.2 - NomePost;
-1.1.3 - ResumoPost;
-1.1.4 - ConteudoPost;
-1.1.5 - CategoriasPost;
-1.1.6 - DataPost;
-
-1.2 - View
-1.2.1 - Lista deve conter:
-1.2.1.1 - NomePost;
-1.2.1.2 - ResumoPost;
-1.2.1.3 - ConteudoPost;
-
-------------------------------------
-2 - Os posts devem ter categorias (Área administrativa);
-2.1 - IDCategoria
-2.2 - NomeCategoria (obrigatorio);
-2.3 - DescricaaCategoria;
-
-3 - Autenticação de Usuários;
-
-4 - Cada Usuário pode editar apenas seus posts;
-
-5 - Todos os Usuários podem ver os posts dos outros;
-
-6 - Perfil de administrador com poder total sobre a plataforma;
-
-7 - Banner com a contagem de posts, categorias e usuários no rodapé;
-
-X - Trasferir para SGBD de grande porte;
-
-X - Hospedar em servidor Linux;
-
-
-Desenvolvimento 
-
-Aplicativo web asp.net Core (MVC) -> o MVC proporciona melhor organização no desenvolvimento das aplicacações.
-
-* Model é criada através de arquivos do tipo "Classe";
-* Habilitar os dataAnotations - "using System.ComponentModel.DataAnnotations;";
