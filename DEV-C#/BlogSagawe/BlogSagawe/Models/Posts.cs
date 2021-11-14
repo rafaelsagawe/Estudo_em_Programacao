@@ -48,7 +48,10 @@ namespace BlogSagawe.Models
         [DataType(DataType.Date)] // Tipo de dado nesse caso data, mas pode ser telefone, email ...
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)] // Formato de visualização na pagina Index, dia-mes-ano
         [Display(Name = "Data da posts")]
-        public DateTime DataPost { get; set; }
+        public DateTime DataPost { get; set; } = DateTime.Now;
+
+        // ------------ Usuário que criou a pastagem
+        public string UsuarioCriador { get; set;}
 
     }
 }

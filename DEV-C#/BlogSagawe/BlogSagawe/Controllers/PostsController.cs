@@ -58,6 +58,7 @@ namespace BlogSagawe.Controllers
         {
             if (ModelState.IsValid)
             {
+                posts.UsuarioCriador = User.Identity.Name; // Pega o usuário logado no sistema e salva na tabela
                 _context.Add(posts);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

@@ -27,7 +27,7 @@ namespace MeuToDoApp.Controllers
         {
             return View(await _context.Todos
                 .AsNoTracking() // Não registar mudanças
-                .Where(x => x.Usuario == User.Identity.Name) // Função x é igual a x usuário do Identity, no index aparecera apenas as tarefas do proprio usuário
+                .Where(x => x.Usuario == User.Identity.Name || User.Identity.Name == "admin@admin.com") // Função x é igual a x usuário do Identity "||" ou usuário administrador de sistema , no index aparecera apenas as tarefas do proprio usuário e o administrador do sistema tem acesso completo
                 .ToListAsync());
         }
 

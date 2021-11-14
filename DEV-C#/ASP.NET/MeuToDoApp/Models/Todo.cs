@@ -10,10 +10,10 @@ namespace MeuToDoApp.Models
 
         [DisplayName("Título")]
         [Required(ErrorMessage ="Campo obrigatório")]
-
         public string Titulo {get; set;}
 
         public bool Feito {get; set;}
+        
         [DisplayName("Data de criação")]
         public DateTime DataCriacao {get; set;} = DateTime.Now;
 

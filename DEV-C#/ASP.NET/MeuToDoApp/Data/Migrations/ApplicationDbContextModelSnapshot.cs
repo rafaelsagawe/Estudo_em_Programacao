@@ -16,6 +16,29 @@ namespace MeuToDoApp.Data.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.12");
 
+            modelBuilder.Entity("MeuToDoApp.Models.Nota", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DataAtualizacao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DataCriacao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Discricao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Todo")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Nota");
+                });
+
             modelBuilder.Entity("MeuToDoApp.Models.Todo", b =>
                 {
                     b.Property<int>("Id")

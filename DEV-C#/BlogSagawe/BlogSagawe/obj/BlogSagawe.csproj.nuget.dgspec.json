@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\git\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogSagawe\\BlogSagawe.csproj": {}
+    "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogSagawe\\BlogSagawe.csproj": {}
   },
   "projects": {
-    "C:\\git\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogSagawe\\BlogSagawe.csproj": {
+    "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogSagawe\\BlogSagawe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogSagawe\\BlogSagawe.csproj",
+        "projectUniqueName": "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogSagawe\\BlogSagawe.csproj",
         "projectName": "BlogSagawe",
-        "projectPath": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogSagawe\\BlogSagawe.csproj",
+        "projectPath": "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogSagawe\\BlogSagawe.csproj",
         "packagesPath": "C:\\Users\\sagaw\\.nuget\\packages\\",
-        "outputPath": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogSagawe\\obj\\",
+        "outputPath": "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogSagawe\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sagaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,11 +46,11 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.4, )"
+              "version": "[5.0.12, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[5.0.4, )"
+              "version": "[5.0.12, )"
             },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
@@ -58,13 +58,13 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.4, )"
+              "version": "[5.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.4, )"
+              "version": "[5.0.12, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -89,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

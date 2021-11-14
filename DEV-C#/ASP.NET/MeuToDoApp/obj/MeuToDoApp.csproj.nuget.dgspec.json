@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\git\\Estudo_em_Programacao\\DEV-C#\\ASP.NET\\MeuToDoApp\\MeuToDoApp.csproj": {}
+    "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\ASP.NET\\MeuToDoApp\\MeuToDoApp.csproj": {}
   },
   "projects": {
-    "C:\\git\\Estudo_em_Programacao\\DEV-C#\\ASP.NET\\MeuToDoApp\\MeuToDoApp.csproj": {
+    "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\ASP.NET\\MeuToDoApp\\MeuToDoApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\ASP.NET\\MeuToDoApp\\MeuToDoApp.csproj",
+        "projectUniqueName": "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\ASP.NET\\MeuToDoApp\\MeuToDoApp.csproj",
         "projectName": "MeuToDoApp",
-        "projectPath": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\ASP.NET\\MeuToDoApp\\MeuToDoApp.csproj",
-        "packagesPath": "C:\\Users\\rafael.sagawe\\.nuget\\packages\\",
-        "outputPath": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\ASP.NET\\MeuToDoApp\\obj\\",
+        "projectPath": "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\ASP.NET\\MeuToDoApp\\MeuToDoApp.csproj",
+        "packagesPath": "C:\\Users\\sagaw\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\ASP.NET\\MeuToDoApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\rafael.sagawe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sagaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\git\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogCoreCodeFist\\BlogCoreCodeFist.csproj": {}
+    "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogCoreCodeFist\\BlogCoreCodeFist.csproj": {}
   },
   "projects": {
-    "C:\\git\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogCoreCodeFist\\BlogCoreCodeFist.csproj": {
+    "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogCoreCodeFist\\BlogCoreCodeFist.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogCoreCodeFist\\BlogCoreCodeFist.csproj",
+        "projectUniqueName": "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogCoreCodeFist\\BlogCoreCodeFist.csproj",
         "projectName": "BlogCoreCodeFist",
-        "projectPath": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogCoreCodeFist\\BlogCoreCodeFist.csproj",
+        "projectPath": "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogCoreCodeFist\\BlogCoreCodeFist.csproj",
         "packagesPath": "C:\\Users\\sagaw\\.nuget\\packages\\",
-        "outputPath": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogCoreCodeFist\\obj\\",
+        "outputPath": "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogCoreCodeFist\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sagaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -89,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

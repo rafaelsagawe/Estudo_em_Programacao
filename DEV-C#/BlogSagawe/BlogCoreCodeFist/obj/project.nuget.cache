@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CjlYJLF6hiivA/ZZ3erJZnGUwHWOHqYAJBGnBCKu5TN22CBSy/apv5cEo2s0KEQVkK5hq/g4lLRhdX89jHCB7Q==",
+  "dgSpecHash": "xdTR2fXoJKZ/hh1lHXyz/LyKa+JSdSb3rBV2x3kaidOGCPjok9OPagnnB1T1B5KmIIrv58Gzzh9n4lJIy4iJrg==",
   "success": true,
-  "projectFilePath": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogCoreCodeFist\\BlogCoreCodeFist.csproj",
+  "projectFilePath": "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\BlogSagawe\\BlogCoreCodeFist\\BlogCoreCodeFist.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sagaw\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.13\\microsoft.aspnetcore.cryptography.internal.3.1.13.nupkg.sha512",
     "C:\\Users\\sagaw\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.13\\microsoft.aspnetcore.cryptography.keyderivation.3.1.13.nupkg.sha512",
