@@ -1,7 +1,7 @@
 o Sistema deve ter:
 
 1 - Model;
-1.1 - Posts's:
+1.1 - Post's:
 1.1.1 - IDPost;
 1.1.2 - NomePost;
 1.1.3 - ResumoPost;
@@ -10,14 +10,22 @@ o Sistema deve ter:
 1.1.6 - DataPost;
 1.1.7 - UsuarioCriador
 
+# Nota foi preciso alterar a string do banco de dados appsettings.json.
+
+## Habilitar migrations
+PM> Install-Package EntityFramework
+PM> Enable-Migrations
+
 1.2 - Categoria's
 1.2.1 - IdCategoria
 1.2.2 - Categoria
 
 =================
 
-2.2 - View
-2.2.1 - Lista deve conter:
+2 - View
+2.1 - Apresentar no menu superior o item post    
+
+2.2.1 - Index deve conter:
 2.2.1.1 - NomePost;
 2.2.1.2 - ResumoPost;
 2.2.1.3 - ConteudoPost;
