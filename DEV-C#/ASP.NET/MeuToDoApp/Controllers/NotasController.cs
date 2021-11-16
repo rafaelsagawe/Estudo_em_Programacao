@@ -46,6 +46,7 @@ namespace MeuToDoApp.Controllers
         // GET: Notas/Create
         public IActionResult Create()
         {
+    
             return View();
         }
 
@@ -58,7 +59,7 @@ namespace MeuToDoApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                ViewBag.ToDoTitulo = "Aqui deveria estár o titulo do notas";
+                
                 _context.Add(notas);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

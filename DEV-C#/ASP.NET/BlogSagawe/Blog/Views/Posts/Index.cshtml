@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Blog.Models.Post>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center">Postagens</h1>
+
+<p>
+    <a asp-action="Create">Nova Postagem</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomePost)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.CategoriasPost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataPost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsuarioCriador)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomePost)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoriasPost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataPost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioCriador)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.idPost">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.idPost">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.idPost">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
