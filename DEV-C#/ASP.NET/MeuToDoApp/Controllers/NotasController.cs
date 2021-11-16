@@ -22,7 +22,7 @@ namespace MeuToDoApp.Controllers
         // GET: Notas
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Nota.ToListAsync());
+            return View(await _context.Notas.ToListAsync());
         }
 
         // GET: Notas/Details/5
@@ -33,14 +33,14 @@ namespace MeuToDoApp.Controllers
                 return NotFound();
             }
 
-            var nota = await _context.Nota
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (nota == null)
+            var notas = await _context.Notas
+                .FirstOrDefaultAsync(m => m.idNota == id);
+            if (notas == null)
             {
                 return NotFound();
             }
 
-            return View(nota);
+            return View(notas);
         }
 
         // GET: Notas/Create
@@ -54,15 +54,16 @@ namespace MeuToDoApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Discricao,Todo,DataCriacao,DataAtualizacao")] Nota nota)
+        public async Task<IActionResult> Create([Bind("idNota,ToDoTitulo,dataCriacao")] Notas notas)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(nota);
+                ViewBag.ToDoTitulo = "Aqui deveria estár o titulo do notas";
+                _context.Add(notas);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(nota);
+            return View(notas);
         }
 
         // GET: Notas/Edit/5
@@ -73,12 +74,12 @@ namespace MeuToDoApp.Controllers
                 return NotFound();
             }
 
-            var nota = await _context.Nota.FindAsync(id);
-            if (nota == null)
+            var notas = await _context.Notas.FindAsync(id);
+            if (notas == null)
             {
                 return NotFound();
             }
-            return View(nota);
+            return View(notas);
         }
 
         // POST: Notas/Edit/5
@@ -86,9 +87,9 @@ namespace MeuToDoApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Discricao,Todo,DataCriacao,DataAtualizacao")] Nota nota)
+        public async Task<IActionResult> Edit(int id, [Bind("idNota,ToDoTitulo,dataCriacao")] Notas notas)
         {
-            if (id != nota.Id)
+            if (id != notas.idNota)
             {
                 return NotFound();
             }
@@ -97,12 +98,12 @@ namespace MeuToDoApp.Controllers
             {
                 try
                 {
-                    _context.Update(nota);
+                    _context.Update(notas);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!NotaExists(nota.Id))
+                    if (!NotasExists(notas.idNota))
                     {
                         return NotFound();
                     }
@@ -113,7 +114,7 @@ namespace MeuToDoApp.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(nota);
+            return View(notas);
         }
 
         // GET: Notas/Delete/5
@@ -124,14 +125,14 @@ namespace MeuToDoApp.Controllers
                 return NotFound();
             }
 
-            var nota = await _context.Nota
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (nota == null)
+            var notas = await _context.Notas
+                .FirstOrDefaultAsync(m => m.idNota == id);
+            if (notas == null)
             {
                 return NotFound();
             }
 
-            return View(nota);
+            return View(notas);
         }
 
         // POST: Notas/Delete/5
@@ -139,15 +140,15 @@ namespace MeuToDoApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var nota = await _context.Nota.FindAsync(id);
-            _context.Nota.Remove(nota);
+            var notas = await _context.Notas.FindAsync(id);
+            _context.Notas.Remove(notas);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool NotaExists(int id)
+        private bool NotasExists(int id)
         {
-            return _context.Nota.Any(e => e.Id == id);
+            return _context.Notas.Any(e => e.idNota == id);
         }
     }
 }

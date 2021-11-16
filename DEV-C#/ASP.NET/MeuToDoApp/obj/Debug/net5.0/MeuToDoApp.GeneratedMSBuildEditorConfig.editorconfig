@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = MeuToDoApp
-build_property.ProjectDir = D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\MeuToDoApp\
+build_property.ProjectDir = C:\git\Estudo_em_Programacao\DEV-C#\ASP.NET\MeuToDoApp\

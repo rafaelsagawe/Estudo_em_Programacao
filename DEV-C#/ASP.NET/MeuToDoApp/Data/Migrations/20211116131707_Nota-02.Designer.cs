@@ -3,14 +3,16 @@ using System;
 using MeuToDoApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MeuToDoApp.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211116131707_Nota-02")]
+    partial class Nota02
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -26,9 +28,6 @@ namespace MeuToDoApp.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("dataCriacao")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("descricao")
                         .HasColumnType("TEXT");
 
                     b.HasKey("idNota");

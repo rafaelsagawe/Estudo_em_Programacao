@@ -24,11 +24,14 @@ namespace MeuToDoApp.Controllers
 
         // GET: Todos
         public async Task<IActionResult> Index()
+
         {
+            
             return View(await _context.Todos
                 .AsNoTracking() // Não registar mudanças
                 .Where(x => x.Usuario == User.Identity.Name || User.Identity.Name == "admin@admin.com") // Função x é igual a x usuário do Identity "||" ou usuário administrador de sistema , no index aparecera apenas as tarefas do proprio usuário e o administrador do sistema tem acesso completo
-                .ToListAsync());
+                .ToListAsync()
+                );
         }
 
         // GET: Todos/Details/5
@@ -43,11 +46,12 @@ namespace MeuToDoApp.Controllers
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (todo == null)
             {
+                ViewBag.ToDoTitulo = todo.Titulo;
                 return NotFound();
             }
 
             // Usuário só pode acessa s sua Tarefa e não dos outros
-            if (todo.Usuario != User.Identity.Name)
+            if (todo.Usuario != User.Identity.Name || User.Identity.Name == "admin@admin.com")
             {
                 return NotFound();
             }
@@ -93,7 +97,7 @@ namespace MeuToDoApp.Controllers
             }
 
             // Usuário só pode acessa s sua Tarefa e não dos outros
-            if (todo.Usuario != User.Identity.Name)
+            if (todo.Usuario != User.Identity.Name || User.Identity.Name == "admin@admin.com")
             {
                 return NotFound();
             }
@@ -153,7 +157,7 @@ namespace MeuToDoApp.Controllers
             }
 
             // Usuário só pode deletar s sua Tarefa e não dos outros
-            if (todo.Usuario != User.Identity.Name)
+            if (todo.Usuario != User.Identity.Name || User.Identity.Name == "admin@admin.com")
             {
                 return NotFound();
             }

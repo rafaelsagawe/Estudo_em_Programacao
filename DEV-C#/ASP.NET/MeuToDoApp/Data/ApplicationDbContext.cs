@@ -16,5 +16,7 @@ namespace MeuToDoApp.Data
 
         public DbSet<Todo> Todos {get;set;} 
 
+        public DbSet<MeuToDoApp.Models.Notas> Notas { get; set; }
+
     }
 }
