@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ySLS0VgB49bg5DVd9ZDnD0vOPr+z1JEZMznbzmffrgXXYnGfuJNAC+6EAjnBJSkH47EAhV3z7FDIboWuP/POQw==",
+  "dgSpecHash": "apN0qm4QuhF39duK5ygR/eIzqO8G//u+9+RM4wt2numL7E/HtP1+d2gbzmiWxTjJgeqMbqc+QJGFozHRs3P5BA==",
   "success": true,
-  "projectFilePath": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\EscolaSagawe\\EscolaSagawe\\EscolaSagawe.csproj",
+  "projectFilePath": "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\ASP.NET\\EscolaSagawe\\EscolaSagawe\\EscolaSagawe.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sagaw\\.nuget\\packages\\bootstrap.chosen\\1.0.0\\bootstrap.chosen.1.0.0.nupkg.sha512",
     "C:\\Users\\sagaw\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
