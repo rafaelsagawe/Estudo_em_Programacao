@@ -36,9 +36,11 @@ namespace ModuloGestãoUsuarios.Areas.Identity.Pages.Account.Manage
         public class InputModel
         {
             // Campos customizados
+            [Display(Name = "Nome Completo")]
+            public string NomeCompleto { get; set; }
 
             [Required]
-            [Display(Name = "PrimeiroNome")]
+            [Display(Name = "Nome")]
             public string PrimeiroNome { get; set; }
 
             [Required]
@@ -54,7 +56,7 @@ namespace ModuloGestãoUsuarios.Areas.Identity.Pages.Account.Manage
             // -------------
 
             [Phone]
-            [Display(Name = "Phone number")]
+            [Display(Name = "Telefone")]
             public string PhoneNumber { get; set; }
         }
 
@@ -72,7 +74,7 @@ namespace ModuloGestãoUsuarios.Areas.Identity.Pages.Account.Manage
                 PhoneNumber = phoneNumber,
                 UserName = userName,
                 PrimeiroNome = primeironome,
-                SobreNome = sobrenome ,
+                SobreNome = sobrenome,
                 FotoPefil = FotoPerfil
             };
         }
@@ -138,6 +140,7 @@ namespace ModuloGestãoUsuarios.Areas.Identity.Pages.Account.Manage
                     return RedirectToPage();
                 }
             }
+
 
             await _signInManager.RefreshSignInAsync(user);
             StatusMessage = "Your profile has been updated";

@@ -200,4 +200,3 @@ D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestã
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\ModuloGestãoUsuarios.dll
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\ModuloGestãoUsuarios.pdb
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\ModuloGestãoUsuarios.genruntimeconfig.cache
-D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\ModuloGestãoUsuarios.csproj.AssemblyReference.cache
