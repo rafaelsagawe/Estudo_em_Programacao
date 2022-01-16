@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -113,6 +115,18 @@ namespace ModuloGestãoUsuarios.Areas.Identity.Pages.Account.Manage
                 user.SobreNome = Input.SobreNome;
                 await _userManager.UpdateAsync(user);
             }
+            // Adição de foto
+            if (Request.Form.Files.Count > 0)
+            {
+                IFormFile file = Request.Form.Files.FirstOrDefault();
+                using (var dataStream = new MemoryStream())
+                {
+                    await file.CopyToAsync(dataStream);
+                    user.FotoPefil = dataStream.ToArray();
+                }
+                await _userManager.UpdateAsync(user);
+            }
+            // -------
 
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
             if (Input.PhoneNumber != phoneNumber)
