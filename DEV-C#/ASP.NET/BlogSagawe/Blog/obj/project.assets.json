@@ -8842,23 +8842,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rafael.sagawe\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\sagaw\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\ASP.NET\\BlogSagawe\\Blog\\Blog.csproj",
+      "projectUniqueName": "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\ASP.NET\\BlogSagawe\\Blog\\Blog.csproj",
       "projectName": "Blog",
-      "projectPath": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\ASP.NET\\BlogSagawe\\Blog\\Blog.csproj",
-      "packagesPath": "C:\\Users\\rafael.sagawe\\.nuget\\packages\\",
-      "outputPath": "C:\\git\\Estudo_em_Programacao\\DEV-C#\\ASP.NET\\BlogSagawe\\Blog\\obj\\",
+      "projectPath": "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\ASP.NET\\BlogSagawe\\Blog\\Blog.csproj",
+      "packagesPath": "C:\\Users\\sagaw\\.nuget\\packages\\",
+      "outputPath": "D:\\Projetos de Desenvolvimento\\Estudo_em_Programacao\\DEV-C#\\ASP.NET\\BlogSagawe\\Blog\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\rafael.sagawe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sagaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
