@@ -28,7 +28,10 @@ namespace ModuloGestãoUsuarios
                     var context = services.GetRequiredService<ApplicationDbContext>();
                     var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
                     var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+                    // Invoca o metodo para semear as regras
                     await ContextSeed.SeedRegrasAsync(userManager, roleManager);
+                    // Invoca o metodo para criação do SuperAdmin
+                    await ContextSeed.SeedSuperAdminAsync(userManager, roleManager);
                 }
                 catch (Exception ex)
                 {
