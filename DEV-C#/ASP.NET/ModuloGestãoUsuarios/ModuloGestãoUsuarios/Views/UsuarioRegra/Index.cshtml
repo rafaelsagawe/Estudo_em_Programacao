@@ -1,0 +1,32 @@
+﻿@using ModuloGestãoUsuarios.Models
+@model List<ModuloGestãoUsuarios.Models.UsuarioRegraViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Regras e Usuários</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Email</th>
+            <th>Roles</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.PrimeiroNome</td>
+                <td>@user.Sobrenome</td>
+                <td>@user.Email</td>
+                <td>@string.Join(" , ", user.Regra.ToList())</td>
+                <td>
+                    <a class="btn btn-primary" asp-controller="UsuarioRegra" asp-action="Gerenciar" asp-route-userId="@user.UserId">Gerenciar Regra</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

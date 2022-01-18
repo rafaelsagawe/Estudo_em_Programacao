@@ -5,20 +5,21 @@
 }
 <h1 class="text-center">Gerenciamento das Regas</h1>
 <hr />
-<form method="post" asp-action="AddRole" asp-controller="RoleManager">
+<form method="post" asp-action="AddRole" asp-controller="GerenciadorRegras">
     <div class="input-group">
         <input name="roleName" class="form-control w-25">
         <span class="input-group-btn">
-            <button class="btn btn-info">Add New Role</button>
+            <button class="btn btn-info">Nova Regra</button>
         </span>
     </div>
 </form>
 <p></p>
+
 <table class="table table-striped">
     <thead>
         <tr>
             <th>Id</th>
-            <th>Role</th>
+            <th>Regra</th>
         </tr>
     </thead>
     <tbody>

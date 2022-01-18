@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ModuloGestãoUsuarios.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace ModuloGestãoUsuarios.Controllers
     public class GerenciadorRegrasController : Controller
     {
         private readonly RoleManager<IdentityRole> _roleManager;
+
         public GerenciadorRegrasController(RoleManager<IdentityRole> roleManager)
         {
             _roleManager = roleManager;
@@ -31,5 +33,7 @@ namespace ModuloGestãoUsuarios.Controllers
             }
             return RedirectToAction("Index");
         }
+
+
     }
 }
