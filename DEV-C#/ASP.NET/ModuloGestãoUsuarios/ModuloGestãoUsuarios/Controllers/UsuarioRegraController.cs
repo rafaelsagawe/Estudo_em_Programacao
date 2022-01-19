@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ModuloGestãoUsuarios.Models;
@@ -9,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace ModuloGestãoUsuarios.Controllers
 {
+
+    [Authorize(Roles = "SuperAdmin")]
+
     public class UsuarioRegraController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -44,7 +48,7 @@ namespace ModuloGestãoUsuarios.Controllers
 
         // Adição do Usuário a Regra
 
-        public async Task<IActionResult> Gerenciar(string userId)
+        public async Task<IActionResult> Gerenciar (string userId)
         {
             ViewBag.userId = userId;
             var user = await _userManager.FindByIdAsync(userId);
@@ -76,7 +80,7 @@ namespace ModuloGestãoUsuarios.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Gerenciar(List<GerenciamentoRegraUsuarioViewModel> model, string userId)
+        public async Task<IActionResult> Gerenciar (List<GerenciamentoRegraUsuarioViewModel> model, string userId)
         {
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null)
