@@ -19,21 +19,20 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                        <!-- Area gerencial do Sistema para usuário SuperAdmin-->
+                        @if (User.IsInRole("SuperAdmin")) // Usuário com regra de SuperAdmin tem acesso 
+                        { 
+                            <li class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="GerenciamentoUsuarios" data-toggle="dropdown">Gerenciamento</button>
+                                <div class="dropdown-menu" aria-labelledby="GerenciamentoUsuarios">
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="UsuarioRegra" asp-action="Index">UsuarioRegra</a>
-                        </li>
+                                    <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="UsuarioRegra" asp-action="Index">UsuarioRegra</a>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="GerenciadorRegras" asp-action="Index">Regras</a>
-                        </li>
-
+                                    <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="UsuarioRegra" asp-action="Regra">Regras</a>
+                                </div>
+                            </li>
+                        }
+                        <!-- Final da Area administrativa -->
                     </ul>
                 </div>
             </div>

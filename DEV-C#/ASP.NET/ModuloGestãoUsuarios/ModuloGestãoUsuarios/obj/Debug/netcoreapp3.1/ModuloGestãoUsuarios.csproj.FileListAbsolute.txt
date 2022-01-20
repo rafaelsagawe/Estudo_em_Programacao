@@ -185,7 +185,6 @@ D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestã
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\Razor\Views\GerenciadorRegras\Index.cshtml.g.cs
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
@@ -194,6 +193,7 @@ D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestã
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\Razor\Views\UsuarioRegra\Gerenciar.cshtml.g.cs
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\Razor\Views\UsuarioRegra\Index.cshtml.g.cs
+D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\Razor\Views\UsuarioRegra\Regra.cshtml.g.cs
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\ModuloGestãoUsuarios.RazorTargetAssemblyInfo.cache
@@ -203,3 +203,4 @@ D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestã
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\ModuloGestãoUsuarios.dll
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\ModuloGestãoUsuarios.pdb
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\ModuloGestãoUsuarios.genruntimeconfig.cache
+D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\ModuloGestãoUsuarios\ModuloGestãoUsuarios\obj\Debug\netcoreapp3.1\ModuloGestãoUsuarios.csproj.AssemblyReference.cache

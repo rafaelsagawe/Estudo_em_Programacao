@@ -48,7 +48,7 @@ namespace ModuloGestãoUsuarios.Controllers
 
         // Adição do Usuário a Regra
 
-        public async Task<IActionResult> Gerenciar (string userId)
+        public async Task<IActionResult> Gerenciar(string userId)
         {
             ViewBag.userId = userId;
             var user = await _userManager.FindByIdAsync(userId);
@@ -78,9 +78,8 @@ namespace ModuloGestãoUsuarios.Controllers
             }
             return View(model);
         }
-
         [HttpPost]
-        public async Task<IActionResult> Gerenciar (List<GerenciamentoRegraUsuarioViewModel> model, string userId)
+        public async Task<IActionResult> Gerenciar(List<GerenciamentoRegraUsuarioViewModel> model, string userId)
         {
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null)
@@ -102,5 +101,60 @@ namespace ModuloGestãoUsuarios.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        // Deletar Usuário
+        /* referencias 
+         * https://csharp-video-tutorials.blogspot.com/2019/08/delete-identity-user-in-aspnet-core.html
+         * https://www.yogihosting.com/aspnet-core-identity-create-read-update-delete-users/
+         */
+        [HttpPost]
+        public async Task<IActionResult> DeletarUsuario(string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+
+            if (user == null)
+            {
+                ViewBag.ErrorMessage = $"Usuário de ID: {userId} não localizado";
+                return View("NotFound");
+            }
+            else
+            {
+                var result = await _userManager.DeleteAsync(user);
+
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index");
+                }
+
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+
+                return View("Index");
+            }
+        }
+
+        // Index das regras
+        public async Task<IActionResult> Regra()
+        {
+            var regras = await _roleManager.Roles.ToListAsync();
+            return View(regras);
+        }
+
+        // Adição de regras/Nivel de acesso 
+        [HttpPost]
+        public async Task<IActionResult> AddRole(string roleName)
+        {
+            if (roleName != null)
+            {
+                await _roleManager.CreateAsync(new IdentityRole(roleName.Trim()));
+            }
+            return RedirectToAction("Regra"); // Retorna para lista de regras
+        }
     }
 }
+
+        
+    
+
