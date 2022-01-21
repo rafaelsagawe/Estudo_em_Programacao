@@ -13,12 +13,12 @@ namespace ModuloGestãoUsuarios.Controllers
 
     [Authorize(Roles = "SuperAdmin")]
 
-    public class UsuarioRegraController : Controller
+    public class GerenciamentoUsuariosController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
 
-        public UsuarioRegraController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
+        public GerenciamentoUsuariosController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             _roleManager = roleManager;
             _userManager = userManager;
