@@ -27,7 +27,7 @@ namespace EscolaSagawe.Models
         public DateTime DataMatricula { get; set; }
 
         [Display(Name = "Nome completo")]
-        public string NomeCompleto
+        public string NomeCompleto // Recebe a concatenação do Nome e Sobrenome
         {
             get
             {
@@ -35,6 +35,7 @@ namespace EscolaSagawe.Models
             }
         }
 
+        // Propriodade de navegação entre as entidades Estudade e Matricula
 
         public ICollection<Matricula> Matriculas { get; set; }
     }

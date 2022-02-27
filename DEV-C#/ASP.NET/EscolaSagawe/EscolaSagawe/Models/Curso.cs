@@ -23,7 +23,9 @@ namespace EscolaSagawe.Models
 
         public Departamento Departamento { get; set; }
 
+        // Propriedade Navegação
         public ICollection<Matricula> Matriculas { get; set; }
+
 
         public ICollection<Instrutor> Instrutors { get; set; }
 

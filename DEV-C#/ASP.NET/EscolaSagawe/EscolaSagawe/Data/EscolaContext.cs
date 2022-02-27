@@ -21,8 +21,15 @@ namespace EscolaSagawe.Data
         public DbSet<Sala> Salas { get; set; }
         public DbSet<CursoAdministrado> cursoAdministrados { get; set; }
 
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Customizando o nome das tabelas no banco
+            modelBuilder.Entity<Curso>().ToTable("Curso");
+            modelBuilder.Entity<Matricula>().ToTable("Matricula");
+            modelBuilder.Entity<Estudante>().ToTable("Estudante");
+            // ---//---  ---//--- ---//---  ---//--- ---//---  ---//---
+
             modelBuilder.Entity<CursoAdministrado>()
                 .HasKey(c => new { c.CursoID, c.InstrutorID });
         }

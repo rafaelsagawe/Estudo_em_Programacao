@@ -15,9 +15,9 @@ namespace EscolaSagawe.Data
             // Look for any students.
             if (context.Estudantes.Any())
             {
-                return;   // DB has been seeded
+                return;   // Semear o banco de dados
             }
-
+             // Adição dos estudadente
             var Estudante = new Estudante[]
             {
                 new Estudante { Nome = "Carson",   Sobrenome = "Alexander",
@@ -42,7 +42,8 @@ namespace EscolaSagawe.Data
             {
                 context.Estudantes.Add(s);
             }
-            context.SaveChanges();
+            context.SaveChanges(); // Salva os novos estudante de teste no banco
+            //  ---//---  ---//---  ---//---  ---//---
 
             var Instrutores = new Instrutor[]
             {
