@@ -335,3 +335,4 @@ D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\EscolaSagawe
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\ref\EscolaSagawe.dll
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\EscolaSagawe.pdb
 D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\EscolaSagawe.genruntimeconfig.cache
+D:\Projetos de Desenvolvimento\Estudo_em_Programacao\DEV-C#\ASP.NET\EscolaSagawe\EscolaSagawe\obj\Debug\net5.0\EscolaSagawe.csproj.AssemblyReference.cache

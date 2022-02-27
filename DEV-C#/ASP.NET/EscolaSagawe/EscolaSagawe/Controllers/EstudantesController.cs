@@ -34,9 +34,9 @@ namespace EscolaSagawe.Controllers
             }
 
             var estudante = await _context.Estudantes
-                .Include(s => s.Matriculas)
+                .Include(s => s.Matriculas) // Include e ThenInclude fazem com que o contexto carregue a propriedade de navegação
                 .ThenInclude(e => e.Curso)
-                .AsNoTracking()
+                .AsNoTracking() //Melhora o desempelho pois o os valores não serão atualizados em tempo real 
                 .FirstOrDefaultAsync(m => m.ID == id);
 
             // Bloco do botão proxomo 
@@ -63,19 +63,25 @@ namespace EscolaSagawe.Controllers
             return View();
         }
 
-        // POST: Estudantes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        // Não Foi aplicado os recursos do tutorial da Microsoft
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Nome,Sobrenome,DataMatricula")] Estudante estudante)
+        public async Task<IActionResult> Create([Bind("Nome,Sobrenome,DataMatricula")] Estudante estudante)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _context.Add(estudante);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _context.Add(estudante);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+            }
+            catch (DbUpdateException /* ex */)
+            {
+                // log de erro
+                ModelState.AddModelError("", "Unable to save changes. " +
+            "Try again, and if the problem persists " +
+            "see your system administrator.");
             }
             return View(estudante);
         }
@@ -96,9 +102,6 @@ namespace EscolaSagawe.Controllers
             return View(estudante);
         }
 
-        // POST: Estudantes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ID,Nome,Sobrenome,DataMatricula")] Estudante estudante)

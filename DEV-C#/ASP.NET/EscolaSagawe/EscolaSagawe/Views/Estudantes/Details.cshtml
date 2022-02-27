@@ -4,12 +4,17 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Estudante</h1>
+<!--
+DisplayNameFor => Visualiza o nome da coluna ou o Display criado na model.
+DisplayFor => Retorna o valor da coluna.
+-->
 
 <div>
-    <h4>Estudante</h4>
+    <h4> @Html.DisplayFor(model => model.NomeCompleto) </h4>
     <hr />
     <dl class="row">
+        <!-- Itens da entidade Estudante-->
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Nome)
         </dt>
@@ -28,8 +33,9 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.DataMatricula)
         </dd>
+        <!-- ==//== ==//== ==//== -->
 
-
+        <!-- Valores dos includes com Entidade Curso  -->
         <!-- Grade -->
 
         <dt class="col-sm-2">
@@ -56,8 +62,6 @@
                 }
             </table>
         </dd>
-
-
         <!-- Grade -->
     </dl>
 </div>
